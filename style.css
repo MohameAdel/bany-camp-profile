@@ -47,19 +47,15 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 6rem 4rem;
-    overflow: hidden;
+    padding: 2rem 4rem; /* Reduced padding */
+    overflow: hidden; /* Strict height */
     background: var(--bg-site);
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
 
 section:nth-child(even) {
-    background-image: radial-gradient(var(--primary-blue) 0.5px, transparent 0.5px), radial-gradient(var(--primary-blue) 0.5px, var(--bg-site) 0.5px);
-    background-size: 20px 20px;
-    background-position: 0 0, 10px 10px;
-    background-color: var(--bg-site);
-    opacity: 0.98;
+    background-color: #ffffff;
 }
 
 /* Top Bar */
@@ -155,21 +151,17 @@ section:nth-child(even) {
     box-shadow: 0 0 10px var(--accent);
 }
 
-/* Landscape A4 feel on desktop, responsive on mobile */
+/* Desktop Optimization */
 @media (min-width: 1024px) {
     section {
-        aspect-ratio: 1.414 / 1; /* A4 Ratio */
-        height: auto;
-        min-height: 100vh;
+        height: 100vh; /* Lock to viewport height */
     }
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7)), url('hero.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--white);
+    background: var(--bg-site);
+    color: var(--text-main);
     text-align: center;
 }
 
@@ -179,23 +171,19 @@ section:nth-child(even) {
 }
 
 .hero h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    color: var(--primary);
-    letter-spacing: -2px;
-}
-
-.shadow-glow {
-    box-shadow: 0 20px 40px -10px rgba(251, 191, 36, 0.4);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: var(--primary-blue);
+    letter-spacing: -1px;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     opacity: 0.9;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 .btn-group {
@@ -237,15 +225,15 @@ section:nth-child(even) {
 /* Grid Layouts */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Reduced gap */
     width: 100%;
     max-width: 1200px;
 }
 
 .card {
     background: var(--bg-card);
-    padding: 3rem;
+    padding: 2rem; /* Reduced padding */
     border-radius: var(--radius);
     border: 1px solid rgba(226, 232, 240, 0.8);
     transition: var(--transition);
@@ -254,7 +242,7 @@ section:nth-child(even) {
     box-shadow: var(--shadow-soft);
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 0.8rem;
 }
 
 .card:hover {
@@ -331,26 +319,23 @@ section:nth-child(even) {
 
 /* Specific Section Styles */
 #journey {
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('journey.png');
-    background-size: cover;
-    background-position: center;
+    background: var(--bg-site);
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem; /* Reduced margin */
 }
 
 .section-header h2 {
-    font-size: 3.5rem;
+    font-size: 2.8rem; /* Scaled down */
     font-weight: 800;
-    color: var(--primary);
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
 }
 
 .section-header p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: var(--text-muted);
     max-width: 800px;
     margin: 0 auto;
