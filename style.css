@@ -38,6 +38,12 @@ body {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.profile-container::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
 }
 
 section {
