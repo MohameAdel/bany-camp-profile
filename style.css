@@ -3,10 +3,10 @@
 :root {
     --primary-blue: #2563eb; /* Vibrant Blue from the start */
     --deep-blue: #1e3a8a; /* Deep Royal Blue for backgrounds */
-    --ice-blue: #f8fbff;
+    --ice-blue: #f1f5fb; /* Slightly darker ice blue */
     --primary-green: #10b981; 
     --accent-cream: #f7f3eb;
-    --bg-site: #ffffff;
+    --bg-site: #f8fafc; /* Slightly off-white blue-grey */
     --bg-card: #ffffff;
     --text-main: #0f172a;
     --text-muted: #475569;
