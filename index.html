@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Top Navigation Bar Removed -->
-
     <!-- Navigation Dots -->
     <div class="nav-dots">
         <div class="dot active" data-target="hero"></div>
         <div class="dot" data-target="why-fail"></div>
         <div class="dot" data-target="market-gaps"></div>
+        <div class="dot" data-target="ecosystem-logic"></div>
         <div class="dot" data-target="journey"></div>
         <div class="dot" data-target="camps"></div>
         <div class="dot" data-target="impact"></div>
+        <div class="dot" data-target="flexibility"></div>
         <div class="dot" data-target="execution"></div>
         <div class="dot" data-target="dna"></div>
         <div class="dot" data-target="actual-impact"></div>
+        <div class="dot" data-target="applied-solution"></div>
+        <div class="dot" data-target="sustainability"></div>
         <div class="dot" data-target="conclusion"></div>
     </div>
 
@@ -42,7 +44,7 @@
 
     <div class="profile-container">
         
-        <!-- Section 1: Hero -->
+        <!-- 1. Hero -->
         <section id="hero" class="hero">
             <div class="hero-content animate">
                 <div class="hero-logo-large" style="margin-bottom: 2rem;">
@@ -55,281 +57,270 @@
                 <span class="badge">معسكرات باني للريادة التجارية والصناعية</span>
                 <h1 style="color: var(--primary-blue);">استثمار في بناء <span style="color: var(--primary-green);">جيل تجاري</span> حقيقي</h1>
                 <p style="color: var(--text-main);">تجاوز التعليم التقليدي وابدأ رحلة التنفيذ الواقعي في قلب السوق. نحن نهيئك لتكون من الـ 5% الناجحين في الميدان التجاري.</p>
-
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="#journey" class="btn btn-primary">ابدأ رحلتك الآن</a>
+                    <a href="#camps" class="btn" style="background: white; border: 1px solid var(--primary-blue); color: var(--primary-blue);">استعرض التفاصيل</a>
+                </div>
             </div>
         </section>
 
-        <!-- Section 2: Why Fail -->
+        <!-- 2. Why Fail (تشخيص الواقع) -->
         <section id="why-fail">
-            <div class="section-header animate">
-                <span class="badge">تحليل أسباب الفشل</span>
+            <div class="section-header">
+                <span class="badge">تشخيص الواقع</span>
                 <h2>لماذا يفشل رواد الأعمال؟</h2>
-                <p>95% من المشاريع الناشئة تفشل بسبب غياب الممارسة الحقيقية</p>
+                <p>الاعتماد على العشوائية بدلاً من الأسس العلمية هو السبب الأول لفشل المعظم.</p>
             </div>
             <div class="grid-container">
-                <div class="card">
-                    <div class="card-icon-top" style="color: #ef4444;">🛑</div>
-                    <h3>فخ التنظير</h3>
-                    <p>التعلم النظري بدون تطبيق واقعي يؤدي لنتائج وهمية وضياع للوقت.</p>
-                    <div class="progress-container"><div class="progress-bar" style="width: 90%; background: #ef4444;"></div></div>
-                </div>
-                <div class="card">
-                    <div class="card-icon-top" style="color: #f59e0b;">🏗️</div>
-                    <h3>عقلية عشوائية</h3>
-                    <p>اتخاذ قرارات مبنية على العاطفة لا البيانات، مما يسبب نزيفاً مالياً مستمراً.</p>
-                    <div class="progress-container"><div class="progress-bar" style="width: 75%; background: #f59e0b;"></div></div>
-                </div>
-                <div class="card">
-                    <div class="card-icon-top" style="color: #3b82f6;">📉</div>
-                    <h3>غياب الانضباط</h3>
-                    <p>افتقار المؤسس للروتين التجاري الصارم اللازم لإدارة العمليات اليومية بنجاح.</p>
-                    <div class="progress-container"><div class="progress-bar" style="width: 80%; background: #3b82f6;"></div></div>
-                </div>
+                <div class="card"><h3>عندي فكرة بس ما اعرف اذا لها رواج بالسوق</h3></div>
+                <div class="card"><h3>ما اعرف أي شئ عن الإدارة أو تشغيل المشاريع</h3></div>
+                <div class="card"><h3>الموردين كثيير... بروح لأرخص مورد دائماً</h3></div>
+                <div class="card"><h3>ما احتاج متخصص لدراسة وضعي الاقتصادي</h3></div>
+            </div>
+            <div class="card horizontal" style="margin-top: 2rem; border-right: 5px solid #ef4444; background: rgba(239, 68, 68, 0.05);">
+                <p style="font-weight: 700; color: #ef4444;">النتيجة؟ مشاريع تتوقف قبل أن تبدأ فعلياً.</p>
             </div>
         </section>
 
-        <!-- Section 3: Market Gaps -->
-        <section id="market-gaps">
-            <div class="section-header animate">
-                <span class="badge">الفجوة الحقيقية</span>
+        <!-- 3. Market Gaps (تحليل الفجوات) -->
+        <section id="market-gaps" style="background: var(--ice-blue);">
+            <div class="section-header">
+                <span class="badge">تحليل الفجوات</span>
                 <h2>الفجوة الحقيقية في السوق</h2>
-                <p>التفاوت بين رواد الأعمال والمشاريع الناجحة يتسع يومياً</p>
+                <p>التفاوت بين رواد الأعمال والمشاريع الناجحة يتسع يومياً، والسبب هي هذه الفجوات الأربع:</p>
             </div>
             <div class="grid-container">
-                <div class="card horizontal" style="grid-column: span 2;">
-                    <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-blue);">🎯</div>
-                    <div style="flex: 1;">
-                        <h3>فجوة "التعلم مقابل التنفيذ"</h3>
-                        <p>أغلب المبادرات تكتفي بالتعليم النظري، بينما تفتقر للممارسة الميدانية التي تصقل الخبرة.</p>
-                        <div class="progress-container"><div class="progress-bar" style="width: 85%;"></div></div>
-                    </div>
-                    <div style="text-align: center; border-right: 1px solid #f1f5f9; padding-right: 2rem; min-width: 150px;">
-                        <h2 style="color: var(--primary-blue); font-size: 3rem; margin-bottom: 0.5rem;">85%</h2>
-                        <p style="font-size: 0.8rem; color: var(--text-muted);">نقص في مهارات التطبيق</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon-top">🔍</div>
-                    <h3>معلومات غير دقيقة</h3>
-                    <p>الاعتماد على مصادر غير موثوقة في دراسة الجدوى وتحديد الموردين.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon-top">💡</div>
-                    <h3>الفكرة مقابل التطبيق</h3>
-                    <p>تحويل الأفكار الحالمة إلى خطط تشغيلية مدروسة ومربحة.</p>
-                </div>
+                <div class="card"><h4>التعلم النظري بدون تطبيق</h4><p>تجاوز فخ الدورات المسجلة والبدء بالتنفيذ المباشر.</p></div>
+                <div class="card"><h4>الاعتماد على معلومات غير دقيقة</h4><p>استقاء الخبرة من ممارسين حقيقيين في قلب السوق.</p></div>
+                <div class="card"><h4>ضعف الاحتكاك المباشر مع الأسواق العالمية</h4><p>بناء جسور تجارية واقعية ومعرفة كيفية التعامل دولياً.</p></div>
+                <div class="card"><h4>عدم إدراك الفرق بين الفكرة والتطبيق التجاري</h4><p>تحويل الأفكار الحالمة إلى خطط تشغيلية مدروسة ومربحة.</p></div>
             </div>
         </section>
 
-        <!-- Section 4: Merchant's Journey -->
+        <!-- 4. Ecosystem Logic (منظومة المعسكرات) -->
+        <section id="ecosystem-logic">
+            <div class="section-header">
+                <span class="badge">الفكرة</span>
+                <h2>من هنا بدأ بناء منظومة المعسكرات</h2>
+                <p>الهدف ليس بناء برنامج معسكر بل نموذج كامل لإعادة تأهيل دخول السوق وتصحيح المسار التجاري.</p>
+            </div>
+            <div class="grid-container" style="grid-template-columns: repeat(6, 1fr);">
+                <div class="card" style="text-align: center;"><h4>الفكرة</h4></div>
+                <div class="card" style="text-align: center;"><h4>فرصة</h4></div>
+                <div class="card" style="text-align: center;"><h4>التصور</h4></div>
+                <div class="card" style="text-align: center;"><h4>تجربة</h4></div>
+                <div class="card" style="text-align: center;"><h4>التعلم</h4></div>
+                <div class="card" style="text-align: center;"><h4>تنفيذ</h4></div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-weight: 700; color: var(--primary-blue);">من خلال منظومة معسكرات تطبيقية متنوعة!!</p>
+        </section>
+
+        <!-- 5. Trader Journey -->
         <section id="journey">
             <div class="section-header">
-                <h2>رحلة التاجر</h2>
-                <p>خطوة بخطوة من الفكرة الجنينية إلى التنفيذ الواقعي المربح</p>
+                <span class="badge">رحلة التاجر</span>
+                <h2>رحلة تطوير مهاراتك خطوة بخطوة</h2>
+                <p>من الفكرة الجنينية إلى التنفيذ الواقعي المربح، نرافقك في كل خطوة لضمان النجاح.</p>
             </div>
             <div class="steps-container">
                 <div class="step-item">
                     <div class="step-number">01</div>
-                    <h3>توليد الفكرة</h3>
-                    <p>من السوق الحقيقي لضمان بناء أساس متين.</p>
+                    <h3>توليد فكرة من السوق الحقيقي</h3>
+                    <p>أساس متين لمشروعك التجاري.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">02</div>
-                    <h3>تحليل الفرص</h3>
-                    <p>ربط الأرقام بالواقع بدقة مالية عالية.</p>
+                    <h3>تحليل الفرص وربط الأرقام بالواقع</h3>
+                    <p>دقة مالية لضمان النجاح.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">03</div>
-                    <h3>التوريد</h3>
-                    <p>التعامل المباشر مع الموردين ومهارات التفاوض.</p>
+                    <h3>التعامل المباشر مع الموردين</h3>
+                    <p>مهارات تفاوض حقيقية.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">04</div>
-                    <h3>آليات الربح</h3>
-                    <p>فهم هيكل التكاليف وبناء نموذج تجاري مستدام.</p>
+                    <h3>فهم آليات الربح والتكلفة</h3>
+                    <p>بناء هيكل تجاري متكامل.</p>
                 </div>
                 <div class="step-item">
                     <div class="step-number">05</div>
-                    <h3>القرار</h3>
-                    <p>اتخاذ قرارات مبنية على تجربة وعقلية قيادية.</p>
+                    <h3>اتخاذ قرارات مبنية على تجربة</h3>
+                    <p>عقلية قيادية ناضجة.</p>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#conclusion" class="btn btn-primary">احجز مقعدك الآن</a>
             </div>
         </section>
 
-        <!-- Section 6: Camp Types -->
-        <section id="camps">
+        <!-- 6. Camp Types (المسارات) -->
+        <section id="camps" style="background: var(--ice-blue);">
             <div class="section-header">
                 <span class="badge">المسارات</span>
-                <h2>أنواع المعسكرات</h2>
-                <p>نقدم مسارات متعددة حسب مرحلة التاجر وطموحه في السوق المحلي والعالمي</p>
+                <h2>أنواع المعسكرات التدريبية والمهنية</h2>
+                <p>نقدم مسارات متعددة حسب مرحلة التاجر وطموحه في السوق المحلي والعالمي.</p>
             </div>
-            <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
-                <div class="card horizontal" style="border-right: 6px solid var(--accent-orange);">
-                    <div class="card-icon" style="background: rgba(249, 115, 22, 0.1); color: var(--accent-orange);">🚀</div>
-                    <div>
-                        <h3>معسكرات التأسيس</h3>
-                        <p>لتحويل الفكرة إلى مشروع وبدء البيع (مثل مبادرة انطلاقه).</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon">🛠️</div>
-                    <div>
-                        <h3>المعسكرات المتخصصة</h3>
-                        <p>لتطوير قطاع أو منتج محدد (مثل معسكر تطوير صناعة وتسويق التمور).</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon">📈</div>
-                    <div>
-                        <h3>تطوير المشاريع</h3>
-                        <p>لتحسين الأداء، تقليل التكاليف، وزيادة الربحية للمشاريع القائمة.</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon">👑</div>
-                    <div>
-                        <h3>القيادات التجارية</h3>
-                        <p>لإعداد الجيل القادم لقيادة الأعمال (مثل معسكر قيادات الصف الثاني).</p>
-                    </div>
-                </div>
+            <div class="grid-container">
+                <div class="card"><h4>معسكرات التأسيس</h4><p>لتحويل الفكرة إلى مشروع وبدء البيع (مثل مبادرة انطلاقه).</p></div>
+                <div class="card"><h4>المعسكرات المتخصصة</h4><p>لتطوير قطاع أو منتج محدد (مثل معسكر تطوير التمور).</p></div>
+                <div class="card"><h4>معسكرات تطوير المشاريع</h4><p>لتحسين الأداء، تقليل التكاليف، وزيادة الربحية.</p></div>
+                <div class="card"><h4>معسكرات القيادات التجارية</h4><p>لإعداد الجيل القادم لقيادة الأعمال.</p></div>
             </div>
         </section>
 
-        <!-- Section 6: Economic Impact -->
+        <!-- 7. Economic Impact (المعايير والتقارير) -->
         <section id="impact">
             <div class="section-header">
-                <h2>الأثر الاقتصادي</h2>
-                <p>رؤيتنا تتجاوز الفرد لتصل إلى الاقتصاد الكلي</p>
+                <span class="badge">المعايير والتقارير</span>
+                <h2>الأثر الاقتصادي لدعم هذا المعسكر</h2>
             </div>
             <div class="grid-container">
-                <div class="card" style="border-right: 5px solid var(--accent);">
-                    <ul style="list-style: none; line-height: 2.5;">
-                        <li>✅ تمكين رواد الأعمال من دخول السوق بشكل صحيح</li>
-                        <li>✅ خلق مشاريع جديدة مستدامة ورفع كفاءة الاستيراد</li>
-                        <li>✅ تقليل خسائر المشاريع الناشئة ودعم نمو الاقتصاد</li>
-                        <li>✅ بناء جيل أكثر وعيًا اقتصاديًا وتجاريًا</li>
-                    </ul>
+                <div class="card">✅ تمكين رواد الأعمال من دخول السوق بشكل صحيح</div>
+                <div class="card">✅ خلق مشاريع جديدة مستدامة</div>
+                <div class="card">✅ رفع كفاءة الاستيراد والتجارة</div>
+                <div class="card">✅ تقليل خسائر المشاريع الناشئة</div>
+                <div class="card">✅ دعم الاقتصاد عبر مشاريع واقعية قابلة للنمو</div>
+                <div class="card">✅ بناء جيل أكثر وعيًا اقتصاديًا</div>
+            </div>
+        </section>
+
+        <!-- 8. Flexibility (مرونة كاملة) -->
+        <section id="flexibility" style="background: var(--primary-blue); color: white;">
+            <div class="section-header">
+                <span class="badge" style="background: rgba(255,255,255,0.1); color: white;">مرونة كاملة</span>
+                <h2 style="color: white;">نموذج معسكرات مرن وقابل للتخصيص</h2>
+                <p style="color: rgba(255,255,255,0.8);">نصمم المعسكرات وفقاً لثلاثة محاور رئيسية تضمن الدقة في التنفيذ:</p>
+            </div>
+            <div class="grid-container">
+                <div class="card" style="background: rgba(255,255,255,0.05); border: none; color: white;">
+                    <h3>طبيعة المشاركين</h3>
+                    <p>مبتدئ • صاحب مشروع • مستثمر</p>
                 </div>
-                <div class="card">
-                    <h3>مرونة كاملة</h3>
-                    <p>نموذج معسكرات مرن وقابل للتخصيص حسب طبيعة المشاركين، القطاع المستهدف، والسوق المنشود.</p>
+                <div class="card" style="background: rgba(255,255,255,0.05); border: none; color: white;">
+                    <h3>القطاع المستهدف</h3>
+                    <p>تجارة • صناعة • خدمات</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); border: none; color: white;">
+                    <h3>السوق المستهدف</h3>
+                    <p>محلي • دولي • أسواق محددة</p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 7: Execution Models -->
+        <!-- 9. Execution Models -->
         <section id="execution">
             <div class="section-header">
-                <h2>آليات تنفيذ مرنة</h2>
-                <p>كل رحلة تجارية تتطلب مساراً فريداً للوصول</p>
-            </div>
-            <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="card">
-                    <span style="color: var(--secondary); font-weight: 700;">أسواق عالمية</span>
-                    <h3>معسكرات دولية</h3>
-                    <p>في الصين وغيرها.. تركيز على الموردين والتوسع الدولي الجريء.</p>
-                </div>
-                <div class="card">
-                    <span style="color: var(--secondary); font-weight: 700;">داخل المملكة</span>
-                    <h3>معسكرات محلية</h3>
-                    <p>تركيز عميق على تطوير المنتج وفهم سلوك المستهلك السعودي.</p>
-                </div>
-                <div class="card">
-                    <span style="color: var(--secondary); font-weight: 700;">محلي + دولي</span>
-                    <h3>معسكرات هجينة</h3>
-                    <p>تأهيل محلي مكثف يتبعه تطبيق دولي مباشر وفتح آفاق جديدة.</p>
-                </div>
-                <div class="card">
-                    <span style="color: var(--secondary); font-weight: 700;">هجين التقنية</span>
-                    <h3>أونلاين + ميداني</h3>
-                    <p>تعلم مرن عبر المنصة مع تنفيذ فعلي داخل السوق.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 8: Operational DNA -->
-        <section id="dna" style="background: #1e3a8a; color: white;">
-            <div class="section-header">
-                <span class="badge">المنهجية التشغيلية</span>
-                <h2 style="color: white;">البصمة التشغيلية</h2>
-                <p style="color: rgba(255,255,255,0.8);">كيف نصنع الفرق في عقلية التاجر؟</p>
+                <span class="badge">Smart Mapping Logic</span>
+                <h2>آليات تنفيذ مرنة تناسب كل هدف</h2>
+                <p>المعسكرات لا تُنفذ بطريقة واحدة، نحن نؤمن بأن كل رحلة تجارية تتطلب مساراً فريداً.</p>
             </div>
             <div class="grid-container">
-                <div class="card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <div class="card-icon-top" style="background: rgba(255,255,255,0.05); color: var(--primary-green);">01</div>
-                    <h3 style="color: white;">التأهيل</h3>
-                    <p style="color: #94a3b8;">بناء الفهم الصحيح وتصحيح المفاهيم الأساسية قبل الانطلاق الميداني.</p>
+                <div class="card">
+                    <h4>معسكرات خارجية (دولية)</h4>
+                    <p>داخل أسواق عالمية (مثل الصين). تركيز على الموردين والتوريد.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <div class="card-icon-top" style="background: rgba(255,255,255,0.05); color: var(--primary-green);">02</div>
-                    <h3 style="color: white;">التطبيق</h3>
-                    <p style="color: #94a3b8;">الممارسة العملية المباشرة والتجربة داخل السوق في ظروف حقيقية ومعقدة.</p>
+                <div class="card">
+                    <h4>معسكرات داخلية (محلية)</h4>
+                    <p>داخل المملكة. تركيز عميق على تطوير المنتج وفهم سلوك المستهلك.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);">
-                    <div class="card-icon-top" style="background: rgba(255,255,255,0.05); color: var(--primary-green);">03</div>
-                    <h3 style="color: white;">الربط</h3>
-                    <p style="color: #94a3b8;">بناء علاقات تجارية حقيقية مع الموردين، المستثمرين، والشركاء الاستراتيجيين.</p>
+                <div class="card">
+                    <h4>معسكرات هجينة</h4>
+                    <p>تأهيل محلي مكثف يتبعه تطبيق دولي مباشر. مثالي للتصدير.</p>
                 </div>
+                <div class="card">
+                    <h4>أونلاين + ميداني</h4>
+                    <p>تعلم مرن عبر المنصة مع تنفيذ فعلي داخل السوق.</p>
+                </div>
+                <div class="card">
+                    <h4>برامج حضورية دورية</h4>
+                    <p>جلسات مستمرة ومتابعة دقيقة لضمان تطوير تدريجي ومستدام.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="font-weight: 700; margin-bottom: 1rem;">أين تريد أن تبدأ؟</p>
+                <a href="#conclusion" class="btn btn-primary">احجز جلسة استشارية مجانية</a>
             </div>
         </section>
 
-        <!-- Section 9: Actual Impact -->
+        <!-- 10. Operational DNA -->
+        <section id="dna" style="background: #1e3a8a; color: white;">
+            <div class="section-header">
+                <span class="badge">Operational DNA</span>
+                <h2 style="color: white;">منهجية التنفيذ التي تصنع الفرق</h2>
+                <p style="color: rgba(255,255,255,0.8);">مراحل هندسية دقيقة تحول المعرفة إلى قوة تنفيذية.</p>
+            </div>
+            <div class="grid-container">
+                <div class="card" style="background: rgba(255,255,255,0.03); border: none; color: white;"><h3>التأهيل</h3><p>بناء الفهم الصحيح قبل الانطلاق.</p></div>
+                <div class="card" style="background: rgba(255,255,255,0.03); border: none; color: white;"><h3>التطبيق</h3><p>التجربة داخل السوق في ظروف حقيقية.</p></div>
+                <div class="card" style="background: rgba(255,255,255,0.03); border: none; color: white;"><h3>الربط</h3><p>بناء علاقات حقيقية مع الموردين والمستثمرين.</p></div>
+                <div class="card" style="background: rgba(255,255,255,0.03); border: none; color: white;"><h3>المتابعة</h3><p>ضمان الاستدامة وتجاوز العقبات التشغيلية.</p></div>
+            </div>
+        </section>
+
+        <!-- 11. Value Add (الأثر الحقيقي) -->
         <section id="actual-impact">
-            <div class="section-header animate">
-                <span class="badge">الأثر الحقيقي</span>
+            <div class="section-header">
+                <span class="badge">القيمة المضافة</span>
                 <h2>الأثر الحقيقي على المشاركين</h2>
-                <p>ما الذي يكتسبه المنضمون لمعسكرات باني؟</p>
+                <p>نمنحك الأدوات والنتائج التي تضعك في مقدمة المنافسين.</p>
             </div>
-            <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
-                <div class="card horizontal">
-                    <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-blue);">⚡</div>
-                    <div>
-                        <h3>الانضباط</h3>
-                        <p>بناء روتين تجاري صارم والالتزام بخطط التنفيذ.</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-green);">📊</div>
-                    <div>
-                        <h3>التحليل</h3>
-                        <p>القدرة على قراءة السوق وتحليل الأرقام المالية بدقة.</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon" style="background: rgba(249, 115, 22, 0.1); color: var(--accent-orange);">🤝</div>
-                    <div>
-                        <h3>الشبكة</h3>
-                        <p>علاقات قوية مع رواد أعمال وموردين عالميين.</p>
-                    </div>
-                </div>
-                <div class="card horizontal">
-                    <div class="card-icon" style="background: rgba(15, 23, 42, 0.1); color: #0f172a;">🛠️</div>
-                    <div>
-                        <h3>التنفيذ</h3>
-                        <p>مهارات واقعية في تشغيل المشاريع وإدارة الموارد.</p>
-                    </div>
-                </div>
+            <div class="grid-container">
+                <div class="card"><h4>الوضوح</h4><p>تحويل التشتت إلى خطة عمل قابلة للتنفيذ.</p></div>
+                <div class="card"><h4>الكفاءة</h4><p>منهجية "البداية الرشيقة" لتوفير رأس المال.</p></div>
+                <div class="card"><h4>التوريد</h4><p>تعلم آليات اختبار الموردين والوصول لمصادر عالمية.</p></div>
+                <div class="card"><h4>الأمان</h4><p>دراسة السوق المبنية على بيانات تقلل احتمالية الفشل.</p></div>
+                <div class="card"><h4>العلاقات</h4><p>شبكة علاقات قوية مع رواد أعمال وموردين.</p></div>
             </div>
         </section>
 
-        <!-- Section 10: Conclusion -->
-        <section id="conclusion" class="conclusion">
+        <!-- 12. Why Applied? (نهاية التنظير) -->
+        <section id="applied-solution" style="background: var(--ice-blue);">
+            <div class="section-header">
+                <span class="badge">نهاية التنظير</span>
+                <h2>لماذا المعسكرات التطبيقية هي الحل؟</h2>
+                <p>لأن السوق لا يُفهم من الكتب… بل من التجربة الميدانية الصريحة.</p>
+            </div>
+            <div class="grid-container">
+                <div class="card">✅ يرى الفرص على أرض الواقع</div>
+                <div class="card">✅ يقارن الموردين بنفسه</div>
+                <div class="card">✅ يفهم المنتج والسوق بشكل مباشر</div>
+                <div class="card">✅ يختبر قراراته قبل المخاطرة</div>
+            </div>
+        </section>
+
+        <!-- 13. Sustainability -->
+        <section id="sustainability">
+            <div class="section-header">
+                <span class="badge">الاستدامة والنمو</span>
+                <h2>نموذج مستدام… وليس تجربة مؤقتة</h2>
+                <p>التأثير لا ينتهي بنهاية المعسكر، بل تبدأ هنا رحلة الشراكة والنجاح المستمر.</p>
+            </div>
+            <div class="grid-container">
+                <div class="card"><h3>متابعة بعد البرنامج</h3><p>جلسات مخصصة لضمان تطبيق ما تعلمته.</p></div>
+                <div class="card"><h3>دعم استشاري مستمر</h3><p>فريقنا معك دائماً للإجابة على استفساراتك.</p></div>
+                <div class="card"><h3>شبكة علاقات طويلة المدى</h3><p>دخول حصري لمجتمع من التجار والخبراء.</p></div>
+                <div class="card"><h3>تطوير مستمر للبرامج</h3><p>تحديث المحتوى بما يتماشى مع تغيرات السوق.</p></div>
+            </div>
+        </section>
+
+        <!-- 14. Conclusion -->
+        <section id="conclusion" class="conclusion" style="background: white;">
             <div class="animate">
                 <div style="margin-bottom: 2rem;">
-                    <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="50" cy="50" r="48" stroke="#10b981" stroke-width="2"/>
-                        <path d="M30 65C40 60 50 60 60 65M50 45C60 40 70 40 80 45" stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
-                        <circle cx="55" cy="35" r="8" fill="#10b981"/>
+                    <svg width="120" height="120" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#10b981" stroke-width="4"/>
+                        <text x="50" y="65" font-family="IBM Plex Sans Arabic" font-weight="900" font-size="32" fill="#2563eb" text-anchor="middle">باني</text>
+                        <circle cx="50" cy="35" r="10" fill="#10b981"/>
                     </svg>
                 </div>
-                <h2>باني • نصنع المستقبل التجاري</h2>
-                <p>شاركنا في بناء 1000 بطل تجاري سنوي... كن جزءاً من هذا المستقبل الآن.</p>
+                <h2>ننطلق نحو جيل يفهم التجارة من مصدرها الحقيقي</h2>
+                <p>جيل لا يكتفي بالأفكار… بل ينجح في السوق ويحول الفرص إلى مشاريع!</p>
                 <div style="margin-top: 3rem;">
-                    <a href="#" class="btn btn-primary" style="background: var(--primary-green); color: #0f172a; padding: 1.2rem 4rem; font-size: 1.4rem;">انضم إلينا اليوم</a>
+                    <a href="#" class="btn btn-primary" style="padding: 1.2rem 4rem; font-size: 1.4rem;">ابدأ رحلتك المستدامة</a>
                 </div>
             </div>
         </section>
-
     </div>
 
     <script>
@@ -344,10 +335,8 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Animation
                     entry.target.classList.add('animate');
                     
-                    // Nav Dots
                     const id = entry.target.getAttribute('id');
                     dots.forEach(dot => {
                         dot.classList.remove('active');
@@ -360,18 +349,6 @@
         }, observerOptions);
 
         sections.forEach(section => observer.observe(section));
-        
-        // Toggle Ecosystem Nodes
-        function toggleNode(type) {
-            const nodes = document.querySelectorAll('.node');
-            const targetNode = document.querySelector('.node-' + type);
-            
-            nodes.forEach(node => {
-                if (node !== targetNode) node.classList.remove('active');
-            });
-            
-            targetNode.classList.toggle('active');
-        }
 
         // Click to scroll
         dots.forEach(dot => {
