@@ -178,21 +178,11 @@ section {
     }
 }
 
-.hero, .conclusion {
-    position: relative;
-}
-
-.logo-left {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    margin-bottom: 0 !important;
-    z-index: 10;
-}
-
-.logo-left img {
-    width: 100px;
-    height: auto;
+/* Hero Section */
+.hero {
+    background: var(--bg-site);
+    color: var(--text-main);
+    text-align: center;
 }
 
 .hero-content {
