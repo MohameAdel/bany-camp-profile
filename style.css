@@ -426,22 +426,22 @@ section::after {
 }
 
 /* Conclusion Slide - Impactful Finish */
-.conclusion {
-    background: #0f172a; /* Deep Navy */
-    color: var(--white);
+#conclusion.conclusion {
+    background: #0f172a !important; /* Force deep navy */
+    color: var(--white) !important;
     text-align: center;
 }
 
-.conclusion h2 {
+#conclusion.conclusion h2 {
     font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 2rem;
-    color: var(--primary-green);
+    color: var(--primary-green) !important;
 }
 
-.conclusion p {
+#conclusion.conclusion p {
     font-size: 1.8rem;
-    color: rgba(255,255,255,0.8);
+    color: rgba(255,255,255,0.9) !important;
     max-width: 900px;
 }
 
