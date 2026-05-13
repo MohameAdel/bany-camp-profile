@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-blue: #1e3a8a; /* Deep Royal Blue */
-    --vibrant-blue: #2563eb; 
+    --primary-blue: #2563eb; /* Vibrant Blue from the start */
+    --deep-blue: #1e3a8a; /* Deep Royal Blue for backgrounds */
     --ice-blue: #f8fbff;
     --primary-green: #10b981; 
     --accent-cream: #f7f3eb;
@@ -454,7 +454,7 @@ section {
 
 /* Conclusion Slide - Impactful Finish */
 #conclusion.conclusion {
-    background: var(--primary-blue) !important; /* Matches the new deep blue */
+    background: var(--deep-blue) !important; /* Matches the dark impact sections */
     color: var(--white) !important;
     text-align: center;
 }
