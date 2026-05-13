@@ -15,6 +15,7 @@
         <div class="dot" data-target="why-fail"></div>
         <div class="dot" data-target="market-gaps"></div>
         <div class="dot" data-target="journey"></div>
+        <div class="dot" data-target="ecosystem"></div>
         <div class="dot" data-target="camps"></div>
         <div class="dot" data-target="impact"></div>
         <div class="dot" data-target="execution"></div>
@@ -132,7 +133,67 @@
             </div>
         </section>
 
-        <!-- Section 5: Camp Types -->
+        <!-- Section 5: Bani Ecosystem (Interactive) -->
+        <section id="ecosystem" class="ecosystem">
+            <div class="section-header">
+                <span class="badge">المنظومة</span>
+                <h2>منظومة باني المتكاملة</h2>
+                <p>نربط جميع أطراف العملية التجارية في منصة واحدة متناغمة</p>
+            </div>
+            
+            <div class="ecosystem-container">
+                <div class="world-map-bg"></div>
+                <div class="hub-center">
+                    <div class="hub-logo">باني</div>
+                    
+                    <!-- Merchants Node -->
+                    <div class="node node-merchants" onclick="toggleNode('merchants')">
+                        <div class="node-circle">التجار</div>
+                        <div class="sub-nodes" id="sub-merchants">
+                            <span class="sub-item">مصادر</span>
+                            <span class="sub-item">خدمات</span>
+                            <span class="sub-item">تحكيم</span>
+                            <span class="sub-item">تمويل</span>
+                            <span class="sub-item">مساهمة</span>
+                        </div>
+                    </div>
+
+                    <!-- Employees Node -->
+                    <div class="node node-employees" onclick="toggleNode('employees')">
+                        <div class="node-circle">الموظفين</div>
+                        <div class="sub-nodes" id="sub-employees">
+                            <span class="sub-item">استقطاب</span>
+                            <span class="sub-item">تمكين</span>
+                        </div>
+                    </div>
+
+                    <!-- Manufacturers Node -->
+                    <div class="node node-manufacturers" onclick="toggleNode('manufacturers')">
+                        <div class="node-circle">المصنعين</div>
+                        <div class="sub-nodes" id="sub-manufacturers">
+                            <span class="sub-item">مصادر</span>
+                            <span class="sub-item">خدمات</span>
+                            <span class="sub-item">تحكيم</span>
+                            <span class="sub-item">تمويل</span>
+                            <span class="sub-item">مساهمة</span>
+                        </div>
+                    </div>
+
+                    <!-- Investors Node -->
+                    <div class="node node-investors" onclick="toggleNode('investors')">
+                        <div class="node-circle">المستثمرين</div>
+                        <div class="sub-nodes" id="sub-investors">
+                            <span class="sub-item">خدمات</span>
+                            <span class="sub-item">تحكيم</span>
+                            <span class="sub-item">تمويل</span>
+                            <span class="sub-item">تمكين</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Camp Types -->
         <section id="camps">
             <div class="section-header">
                 <span class="badge">المسارات</span>
@@ -336,6 +397,18 @@
         }, observerOptions);
 
         sections.forEach(section => observer.observe(section));
+        
+        // Toggle Ecosystem Nodes
+        function toggleNode(type) {
+            const nodes = document.querySelectorAll('.node');
+            const targetNode = document.querySelector('.node-' + type);
+            
+            nodes.forEach(node => {
+                if (node !== targetNode) node.classList.remove('active');
+            });
+            
+            targetNode.classList.toggle('active');
+        }
 
         // Click to scroll
         dots.forEach(dot => {

@@ -477,6 +477,152 @@ section {
     color: var(--white) !important;
 }
 
+/* Ecosystem Section */
+.ecosystem {
+    background: #f8fbff;
+    position: relative;
+    overflow: hidden;
+}
+
+.ecosystem-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.world-map-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg') no-repeat center;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.hub-center {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    z-index: 10;
+}
+
+.hub-logo {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 3px solid var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 20;
+}
+
+.node {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.node-circle {
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    border-width: 4px;
+    border-style: solid;
+}
+
+.node:hover .node-circle {
+    transform: scale(1.1);
+}
+
+/* Node Positions */
+.node-merchants { top: -140px; right: -140px; }
+.node-merchants .node-circle { border-color: #1e3a8a; color: #1e3a8a; }
+
+.node-employees { top: -140px; left: -140px; }
+.node-employees .node-circle { border-color: #ef4444; color: #ef4444; }
+
+.node-manufacturers { bottom: -140px; left: -140px; }
+.node-manufacturers .node-circle { border-color: #10b981; color: #10b981; }
+
+.node-investors { bottom: -140px; right: -140px; }
+.node-investors .node-circle { border-color: #f59e0b; color: #f59e0b; }
+
+/* Sub Nodes Arc */
+.sub-nodes {
+    position: absolute;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+}
+
+.node-merchants .sub-nodes { top: -40px; right: 110px; flex-direction: row-reverse; }
+.node-employees .sub-nodes { top: -40px; left: 110px; }
+.node-manufacturers .sub-nodes { bottom: -40px; left: 110px; }
+.node-investors .sub-nodes { bottom: -40px; right: 110px; flex-direction: row-reverse; }
+
+.node.active .sub-nodes {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(10px);
+}
+
+.node-merchants.active .sub-nodes { transform: translateX(-10px); }
+
+.sub-item {
+    padding: 0.4rem 1rem;
+    background: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: 1px solid #f1f5f9;
+}
+
+/* Connecting Lines (Simplified with pseudo-elements) */
+.node::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: currentColor;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.node-merchants::before { top: 90px; right: 80px; transform: rotate(45deg); color: #1e3a8a; }
+.node-employees::before { top: 90px; left: 80px; transform: rotate(-45deg); color: #ef4444; }
+.node-manufacturers::before { bottom: 90px; left: 80px; transform: rotate(45deg); color: #10b981; }
+.node-investors::before { bottom: 90px; right: 80px; transform: rotate(-45deg); color: #f59e0b; }
+
+@media (max-width: 768px) {
+    .ecosystem-container { height: 800px; transform: scale(0.7); }
+}
+
 /* Responsive fixes */
 @media (max-width: 768px) {
     section {
