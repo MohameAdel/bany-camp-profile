@@ -10,11 +10,13 @@
     <!-- Top Navigation Bar (Dashboard style) -->
     <nav class="top-bar">
         <div class="logo-area">
-            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100" height="100" rx="20" fill="#fbbf24"/>
-                <path d="M30 70V30H50C61 30 70 39 70 50C70 61 61 70 50 70H30Z" stroke="#0f172a" stroke-width="8"/>
+            <!-- Simplified Logo SVG based on your image -->
+            <svg width="45" height="45" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="48" stroke="#10b981" stroke-width="4"/>
+                <path d="M25 65C35 60 45 60 55 65M45 45C55 40 65 40 75 45" stroke="#2563eb" stroke-width="8" stroke-linecap="round"/>
+                <circle cx="50" cy="35" r="8" fill="#10b981"/>
             </svg>
-            <span class="logo-text">BANY • باني</span>
+            <span class="logo-text" style="color: var(--primary-blue);">BANY <span style="color: var(--primary-green);">•</span> باني</span>
         </div>
         <div class="nav-actions">
             <a href="#journey">رحلة التاجر</a>
@@ -40,13 +42,14 @@
     <div class="profile-container">
         
         <!-- Section 1: Hero -->
-        <section id="hero" class="hero">
+        <section id="hero" class="hero" style="background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('hero.png');">
             <div class="hero-content animate">
-                <h1>بناء العقليات <span style="color: var(--accent);">التجارية</span></h1>
-                <p>تجاوز التعليم التقليدي وابدأ رحلة التنفيذ الواقعي في قلب السوق. نحن نهيئك لتكون من الـ 5% الناجحين في الميدان التجاري.</p>
+                <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-green); border-color: var(--primary-green);">أكاديمية بناء العقليات</span>
+                <h1 style="color: white;">استثمار في بناء <span style="color: var(--primary-green);">جيل تجاري</span> حقيقي</h1>
+                <p style="color: rgba(255,255,255,0.9);">تجاوز التعليم التقليدي وابدأ رحلة التنفيذ الواقعي في قلب السوق. نحن نهيئك لتكون من الـ 5% الناجحين في الميدان التجاري.</p>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary shadow-glow">ابدأ رحلتك الآن</a>
-                    <a href="#" class="btn btn-secondary">استكشف النظام</a>
+                    <a href="#" class="btn btn-primary" style="background: var(--primary-blue);">ابدأ رحلتك الآن</a>
+                    <a href="#" class="btn btn-secondary" style="border-color: white; color: white;">استكشف النظام</a>
                 </div>
             </div>
         </section>
@@ -150,8 +153,8 @@
                 <p>نقدم مسارات متعددة حسب مرحلة التاجر وطموحه في السوق المحلي والعالمي</p>
             </div>
             <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
-                <div class="card horizontal">
-                    <div class="card-icon">🚀</div>
+                <div class="card horizontal" style="border-right: 6px solid var(--accent-orange);">
+                    <div class="card-icon" style="background: rgba(249, 115, 22, 0.1); color: var(--accent-orange);">🚀</div>
                     <div>
                         <h3>معسكرات التأسيس</h3>
                         <p>لتحويل الفكرة إلى مشروع وبدء البيع (مثل مبادرة انطلاقه).</p>
