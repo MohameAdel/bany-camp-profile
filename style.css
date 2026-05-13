@@ -47,8 +47,8 @@ section {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 2rem 4rem; /* Reduced padding */
-    overflow: hidden; /* Strict height */
+    padding: 5rem 4rem; /* Increased top padding to prevent header cutoff */
+    overflow: hidden;
     background: var(--bg-site);
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -337,13 +337,13 @@ section {
 .badge {
     display: inline-block;
     padding: 0.6rem 1.8rem;
-    background: rgba(37, 99, 235, 0.05);
-    color: var(--primary-blue);
+    background: #f7f3eb; /* Matches the hero badge color */
+    color: #1e293b;
     border-radius: 50px;
     font-weight: 700;
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .status-warning {
