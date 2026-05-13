@@ -59,10 +59,9 @@ section:nth-child(odd) {
 }
 
 section:nth-child(even) {
-    background-color: #f1f7ff; /* More distinct light blue */
-    background-image: radial-gradient(var(--primary-blue) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 1;
+    background-color: #f5f9ff; /* Soft Blue tint */
+    background-image: radial-gradient(var(--primary-blue) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
 }
 
 /* Clear separator line */
@@ -184,7 +183,7 @@ section {
 }
 
 .hero h1 {
-    font-size: 4.2rem; /* Scaled up */
+    font-size: 4.2rem;
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -308,15 +307,14 @@ section:nth-child(even) .card {
 
 .badge {
     display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background: rgba(251, 191, 36, 0.1);
-    color: var(--secondary);
+    padding: 0.6rem 1.8rem;
+    background: rgba(37, 99, 235, 0.05);
+    color: var(--primary-blue);
     border-radius: 50px;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
 .status-warning {
@@ -434,13 +432,18 @@ section:nth-child(even) .card {
     font-size: 4.5rem;
     font-weight: 900;
     margin-bottom: 2rem;
-    color: var(--primary-green) !important;
+    color: var(--white) !important; /* White title for impact */
 }
 
 #conclusion.conclusion p {
     font-size: 1.8rem;
     color: rgba(255,255,255,0.9) !important;
     max-width: 900px;
+}
+
+#conclusion .btn-primary {
+    background: var(--primary-blue) !important;
+    color: var(--white) !important;
 }
 
 /* Responsive fixes */
