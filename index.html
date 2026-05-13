@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Navigation Bar (Dashboard style) -->
+    <nav class="top-bar">
+        <div class="logo-area">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" rx="20" fill="#fbbf24"/>
+                <path d="M30 70V30H50C61 30 70 39 70 50C70 61 61 70 50 70H30Z" stroke="#0f172a" stroke-width="8"/>
+            </svg>
+            <span class="logo-text">BANY • باني</span>
+        </div>
+        <div class="nav-actions">
+            <a href="#journey">رحلة التاجر</a>
+            <a href="#camps">المسارات</a>
+            <a href="#" class="btn-sm">احجز مقعدك</a>
+        </div>
+    </nav>
+
     <!-- Navigation Dots -->
     <div class="nav-dots">
         <div class="dot active" data-target="hero"></div>
@@ -26,17 +42,11 @@
         <!-- Section 1: Hero -->
         <section id="hero" class="hero">
             <div class="hero-content animate">
-                <div class="logo-placeholder" style="margin-bottom: 2rem;">
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100" height="100" rx="20" fill="#fbbf24"/>
-                        <path d="M30 70V30H50C61 30 70 39 70 50C70 61 61 70 50 70H30Z" stroke="#0f172a" stroke-width="8"/>
-                    </svg>
-                </div>
-                <h1>باني • أكاديمية بناء العقليات التجارية</h1>
-                <p>استثمار في بناء جيل تجاري حقيقي. تجاوز التعليم التقليدي وابدأ رحلة التنفيذ الواقعي في قلب السوق. نحن نهيئك لتكون من الـ 5% الناجحين في الميدان التجاري.</p>
+                <h1>بناء العقليات <span style="color: var(--accent);">التجارية</span></h1>
+                <p>تجاوز التعليم التقليدي وابدأ رحلة التنفيذ الواقعي في قلب السوق. نحن نهيئك لتكون من الـ 5% الناجحين في الميدان التجاري.</p>
                 <div class="btn-group">
-                    <a href="#" class="btn btn-primary">ابدأ رحلتك الآن</a>
-                    <a href="#" class="btn btn-secondary">استعرض التفاصيل</a>
+                    <a href="#" class="btn btn-primary shadow-glow">ابدأ رحلتك الآن</a>
+                    <a href="#" class="btn btn-secondary">استكشف النظام</a>
                 </div>
             </div>
         </section>
@@ -44,21 +54,25 @@
         <!-- Section 2: Gap Analysis -->
         <section id="why-fail">
             <div class="section-header animate">
-                <h2>تحليل الفجوات</h2>
-                <p>لماذا يفشل رواد الأعمال؟</p>
+                <span class="badge">تحليل الفجوات</span>
+                <h2>لماذا يفشل رواد الأعمال؟</h2>
+                <p>الاعتماد على العشوائية بدلاً من الأسس العلمية هو السبب الأول لفشل المعظم.</p>
             </div>
             <div class="grid-container">
                 <div class="card">
+                    <div class="card-icon" style="background: #fee2e2; color: #ef4444;">📉</div>
                     <h3>عقلية عشوائية</h3>
-                    <p>الاعتماد على العشوائية بدلاً من الأسس العلمية هو السبب الأول لفشل المعظم. نحن هنا لنغير هذه المعادلة برؤية واقعية.</p>
+                    <p>التخبط في القرارات بدون مرجعية علمية واضحة، مما يؤدي لهدر الموارد والوقت.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon" style="background: #fef3c7; color: #d97706;">📖</div>
                     <h3>فخ التنظير</h3>
-                    <p>التعلم النظري بدون تطبيق. تجاوز فخ الدورات المسجلة والبدء بالتنفيذ المباشر.</p>
+                    <p>التعلم النظري بدون تطبيق واقعي. تجاوز فخ الدورات المسجلة والبدء بالتنفيذ المباشر.</p>
                 </div>
-                <div class="card" style="border-color: #ef4444; background: #fff5f5;">
+                <div class="card status-warning">
+                    <div class="card-icon" style="background: #f1f5f9; color: #64748b;">🛑</div>
                     <h3>النتيجة؟</h3>
-                    <p>مشاريع تتوقف قبل أن تبدأ فعلياً بسبب غياب التشخيص الصحيح للواقع.</p>
+                    <p>مشاريع تتوقف قبل أن تبدأ فعلياً بسبب غياب التشخيص الصحيح لواقع السوق.</p>
                 </div>
             </div>
         </section>
@@ -131,25 +145,38 @@
         <!-- Section 5: Camp Types -->
         <section id="camps">
             <div class="section-header">
+                <span class="badge">المسارات</span>
                 <h2>أنواع المعسكرات</h2>
-                <p>مسارات متعددة تناسب طموحك في السوق المحلي والعالمي</p>
+                <p>نقدم مسارات متعددة حسب مرحلة التاجر وطموحه في السوق المحلي والعالمي</p>
             </div>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>معسكرات التأسيس</h3>
-                    <p>لتحويل الفكرة إلى مشروع وبدء البيع (مثل مبادرة انطلاقه).</p>
+            <div class="grid-container" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="card horizontal">
+                    <div class="card-icon">🚀</div>
+                    <div>
+                        <h3>معسكرات التأسيس</h3>
+                        <p>لتحويل الفكرة إلى مشروع وبدء البيع (مثل مبادرة انطلاقه).</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>المعسكرات المتخصصة</h3>
-                    <p>لتطوير قطاع أو منتج محدد (مثل معسكر تطوير صناعة وتسويق التمور).</p>
+                <div class="card horizontal">
+                    <div class="card-icon">🛠️</div>
+                    <div>
+                        <h3>المعسكرات المتخصصة</h3>
+                        <p>لتطوير قطاع أو منتج محدد (مثل معسكر تطوير صناعة وتسويق التمور).</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>تطوير المشاريع</h3>
-                    <p>لتحسين الأداء، تقليل التكاليف، وزيادة الربحية للمشاريع القائمة.</p>
+                <div class="card horizontal">
+                    <div class="card-icon">📈</div>
+                    <div>
+                        <h3>تطوير المشاريع</h3>
+                        <p>لتحسين الأداء، تقليل التكاليف، وزيادة الربحية للمشاريع القائمة.</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>القيادات التجارية</h3>
-                    <p>لإعداد الجيل القادم لقيادة الأعمال (مثل معسكر قيادات الصف الثاني).</p>
+                <div class="card horizontal">
+                    <div class="card-icon">👑</div>
+                    <div>
+                        <h3>القيادات التجارية</h3>
+                        <p>لإعداد الجيل القادم لقيادة الأعمال (مثل معسكر قيادات الصف الثاني).</p>
+                    </div>
                 </div>
             </div>
         </section>
