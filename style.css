@@ -190,7 +190,7 @@ section::after {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4.2rem; /* Scaled up */
     font-weight: 900;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -199,10 +199,10 @@ section::after {
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Scaled up */
     opacity: 0.9;
     margin-bottom: 2rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .btn-group {
@@ -326,14 +326,16 @@ section::after {
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Scaled up */
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--primary-blue);
+    font-weight: 700;
 }
 
 .card p {
     color: var(--text-muted);
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 1.15rem; /* Scaled up */
 }
 
 /* Specific Section Styles */
@@ -423,16 +425,24 @@ section::after {
     animation: fadeIn 0.8s ease forwards;
 }
 
-/* Conclusion Slide */
+/* Conclusion Slide - Impactful Finish */
 .conclusion {
-    background: var(--bg-dark);
+    background: #0f172a; /* Deep Navy */
     color: var(--white);
     text-align: center;
 }
 
 .conclusion h2 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
+    font-weight: 900;
     margin-bottom: 2rem;
+    color: var(--primary-green);
+}
+
+.conclusion p {
+    font-size: 1.8rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 900px;
 }
 
 /* Responsive fixes */
