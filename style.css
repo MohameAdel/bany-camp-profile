@@ -180,9 +180,30 @@ section {
 
 /* Hero Section */
 .hero {
-    background: var(--bg-site);
+    background: linear-gradient(-45deg, #f1f5f9, #e2e8f0, #cbd5e1, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--text-main);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: 0;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero-content {
@@ -788,6 +809,67 @@ section.animate .timeline-step:hover .timeline-icon {
 #conclusion .btn-primary {
     background: var(--primary-blue) !important;
     color: var(--white) !important;
+}
+
+/* Counters */
+.counter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.counter-item {
+    flex: 1;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    min-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.counter-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--primary-blue);
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+}
+
+.counter-item:hover::after {
+    transform: scaleX(1);
+}
+
+.counter-item h3 {
+    font-size: 3.5rem;
+    color: var(--primary-blue);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.counter-item h3::after {
+    content: '+';
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    vertical-align: super;
+}
+
+.counter-item span {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 /* Responsive fixes */
