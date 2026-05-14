@@ -338,8 +338,175 @@ section {
 
 .card:hover .card-icon {
     transform: rotate(5deg) scale(1.1);
-    background: var(--primary);
-    color: var(--accent);
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* Flip Cards */
+.flip-card-container {
+    perspective: 1000px;
+    min-height: 300px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-card);
+    border: 1px solid #eef2f6;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.flip-card-front {
+    z-index: 2;
+}
+
+.flip-card-front .card-icon-large {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    width: 100px;
+    height: 100px;
+    background: var(--ice-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.flip-card-container:hover .flip-card-front .card-icon-large {
+    transform: scale(1.1);
+}
+
+.flip-card-front h3 {
+    font-size: 1.6rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    margin: 0;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.2);
+}
+
+.flip-card-back.danger { background: #ef4444; box-shadow: 0 15px 35px rgba(239, 68, 68, 0.2); }
+.flip-card-back.warning { background: #f59e0b; box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2); }
+
+.flip-card-back h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.flip-card-back p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.flip-card-back .progress-container {
+    background: rgba(255,255,255,0.2);
+    margin-top: 1.5rem;
+}
+
+/* Hover Reveal Horizontal Card */
+.hover-reveal-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #eef2f6;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+.hover-reveal-card:hover {
+    transform: translateX(-10px);
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
+    border-color: var(--primary-blue);
+}
+
+.hover-reveal-card .card-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--ice-blue);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.hover-reveal-card:hover .card-icon {
+    background: var(--primary-blue);
+    color: white;
+    transform: rotate(5deg) scale(1.1);
+}
+
+.hover-reveal-card .content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-reveal-card h3 {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin: 0;
+    transition: var(--transition);
+}
+
+.hover-reveal-card:hover h3 {
+    color: var(--primary-blue);
+}
+
+.hover-reveal-card p {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transform: translateY(10px);
+}
+
+.hover-reveal-card:hover p {
+    max-height: 100px;
+    opacity: 1;
+    margin-top: 0.8rem;
+    transform: translateY(0);
 }
 
 .badge {
