@@ -22,40 +22,38 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll; /* Ensure standard scrollbar is always visible to prevent layout shift */
+}
+
 body {
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: var(--bg-site);
     color: var(--text-main);
     direction: rtl;
     overflow-x: hidden;
-    scroll-behavior: smooth;
     line-height: 1.6;
 }
 
 /* Slide Layout */
 .profile-container {
     width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-}
-
-.profile-container::-webkit-scrollbar {
-    display: none; /* Chrome/Safari/Opera */
+    overflow: visible;
 }
 
 section {
-    width: 100vw;
-    height: 100vh;
+    width: 100%; /* Prevents horizontal scrollbar */
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* Ensure content starts from top to avoid cutoff */
     align-items: center;
     position: relative;
     padding: 6rem 4rem 2rem; /* Generous top padding, smaller bottom */
-    overflow-y: auto; /* Allow scrolling within slide if content overflows */
+    overflow: visible; /* Prevent internal scrollbars */
     background: var(--bg-site);
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -174,7 +172,9 @@ section {
 /* Desktop Optimization */
 @media (min-width: 1024px) {
     section {
-        height: 100vh; /* Lock to viewport height */
+        min-height: 100vh;
+        height: auto;
+        overflow: visible;
     }
 }
 
@@ -2352,9 +2352,12 @@ section.animate .transform-card:nth-child(5) { transition-delay: 1.4s; }
     }
 
     /* Disable scroll snapping to make scrolling smoother on mobile */
+    html {
+        scroll-snap-type: none !important;
+    }
     .profile-container {
         scroll-snap-type: none !important;
-        overflow-y: auto !important;
+        overflow: visible !important;
     }
 
     /* Responsive Typography */
