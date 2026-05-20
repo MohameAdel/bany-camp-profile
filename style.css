@@ -1275,6 +1275,66 @@ section.animate .transform-card:nth-child(5) { transition-delay: 1.4s; }
     color: var(--text-muted);
 }
 
+/* Previous Camps Section Background */
+#previous-camps {
+    background-color: var(--accent-cream) !important;
+    background-image: radial-gradient(rgba(37, 99, 235, 0.05) 1px, transparent 1px) !important;
+    background-size: 30px 30px !important;
+}
+
+/* Gallery Gradient Classes */
+.img-leaders {
+    background: linear-gradient(135deg, #1e3a8a 0%, #8b5cf6 100%) !important;
+}
+
+.tag-leaders {
+    background: rgba(139, 92, 246, 0.85) !important;
+}
+
+.img-video1 {
+    background: linear-gradient(135deg, #0b1a30 0%, #1e3a8a 100%) !important;
+}
+
+.img-video2 {
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%) !important;
+}
+
+.tag-video {
+    background: rgba(16, 185, 129, 0.85) !important;
+}
+
+/* Video Play Button Overlay */
+.video-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    background: rgba(37, 99, 235, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+    transition: var(--transition);
+    z-index: 3;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.gallery-card:hover .video-play-overlay {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--primary-green) !important;
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4) !important;
+}
+
+.video-play-overlay svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    margin-right: -3px; /* visual center offset for play icon triangle */
+}
+
 /* Flexibility and Customization Section */
 .flexibility-intro {
     max-width: 800px;
