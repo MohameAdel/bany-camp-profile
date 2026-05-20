@@ -3203,51 +3203,26 @@ section.animate .transform-card:nth-child(5) { transition-delay: 1.4s; }
 }
 
 /* ==========================================================================
-   Section 6: Camp Types (أنواع المعسكرات) Refined Styles
+   Section 6: Types of Camps (أنواع المعسكرات) Custom Styles
    ========================================================================== */
 #camps {
-    background: radial-gradient(circle at 50% 50%, #0a1424 0%, #050b14 100%) !important;
+    background: linear-gradient(135deg, #f4f7fb 0%, #e9eff7 100%) !important;
     padding: 7rem 4rem 6rem !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-top: 1px solid rgba(37, 99, 235, 0.05) !important;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.05) !important;
     position: relative !important;
     overflow: hidden !important;
 }
 
-/* Background decorative ambient glow */
-#camps::before {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 1;
-}
-
-#camps::after {
-    content: '';
-    position: absolute;
-    bottom: -20%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 1;
-}
-
 #camps .section-header {
-    position: relative;
-    z-index: 2;
     text-align: center;
     margin-bottom: 3.5rem;
+    position: relative;
+    z-index: 2;
 }
 
 #camps .section-header h2 {
-    color: #ffffff !important;
+    color: var(--text-main) !important;
     font-size: clamp(2rem, 5vw, 3.2rem) !important;
     font-weight: 800 !important;
     margin-bottom: 1rem !important;
@@ -3255,177 +3230,192 @@ section.animate .transform-card:nth-child(5) { transition-delay: 1.4s; }
 }
 
 #camps .section-header p {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: var(--text-muted) !important;
     font-size: clamp(1.05rem, 2vw, 1.25rem) !important;
     max-width: 600px !important;
     margin: 0 auto !important;
     line-height: 1.6 !important;
 }
 
-#camps .grid-container {
+#camps .camp-grid {
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 2.2rem !important;
-    max-width: 1240px !important;
+    gap: 2.5rem !important;
+    max-width: 1200px !important;
     margin: 0 auto !important;
     width: 100% !important;
     position: relative;
     z-index: 2;
 }
 
-#camps .hover-reveal-card {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+/* Base Card Style */
+.camp-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
     border-radius: 24px !important;
-    padding: 2.5rem 2.2rem !important;
+    padding: 2.5rem !important;
     display: flex !important;
-    align-items: flex-start !important;
-    gap: 1.8rem !important;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-    cursor: pointer !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
     position: relative !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03) !important;
+    cursor: pointer !important;
     overflow: hidden !important;
-    min-height: auto !important;
     text-align: right !important;
-    flex-direction: row !important;
+    height: 100% !important; /* Forces cards in same row to match height */
 }
 
-/* Stage-specific accent borders & shadows */
-#camps .hover-reveal-card[data-stage="1"] { border-right: 5px solid #f97316 !important; }
-#camps .hover-reveal-card[data-stage="2"] { border-right: 5px solid #10b981 !important; }
-#camps .hover-reveal-card[data-stage="3"] { border-right: 5px solid #3b82f6 !important; }
-#camps .hover-reveal-card[data-stage="4"] { border-right: 5px solid #8b5cf6 !important; }
-
-/* Subtle top glow to show depth */
-#camps .hover-reveal-card::after {
+/* Left/Leading border accent depending on the stage */
+.camp-card::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-}
-
-#camps .hover-reveal-card:hover {
-    transform: translateY(-8px) !important;
-    background: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(255, 255, 255, 0.15) !important;
-}
-
-#camps .hover-reveal-card[data-stage="1"]:hover { box-shadow: 0 20px 40px rgba(249, 115, 22, 0.15) !important; }
-#camps .hover-reveal-card[data-stage="2"]:hover { box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15) !important; }
-#camps .hover-reveal-card[data-stage="3"]:hover { box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15) !important; }
-#camps .hover-reveal-card[data-stage="4"]:hover { box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15) !important; }
-
-#camps .card-icon {
-    width: 68px !important;
-    height: 68px !important;
-    border-radius: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 2rem !important;
-    flex-shrink: 0 !important;
-    margin: 0 !important;
+    right: 0; /* RTL leading side */
+    width: 6px;
+    height: 100%;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-#camps .hover-reveal-card[data-stage="1"] .card-icon { background: rgba(249, 115, 22, 0.1) !important; color: #f97316 !important; }
-#camps .hover-reveal-card[data-stage="2"] .card-icon { background: rgba(16, 185, 129, 0.1) !important; color: #10b981 !important; }
-#camps .hover-reveal-card[data-stage="3"] .card-icon { background: rgba(59, 130, 246, 0.1) !important; color: #3b82f6 !important; }
-#camps .hover-reveal-card[data-stage="4"] .card-icon { background: rgba(139, 92, 246, 0.1) !important; color: #8b5cf6 !important; }
+.camp-card[data-stage="1"]::before { background-color: #f97316 !important; }
+.camp-card[data-stage="2"]::before { background-color: #10b981 !important; }
+.camp-card[data-stage="3"]::before { background-color: #3b82f6 !important; }
+.camp-card[data-stage="4"]::before { background-color: #8b5cf6 !important; }
 
-#camps .hover-reveal-card:hover .card-icon {
+/* Hover effects */
+.camp-card:hover {
+    transform: translateY(-8px) !important;
+    border-color: #cbd5e1 !important;
+}
+
+.camp-card[data-stage="1"]:hover { box-shadow: 0 20px 40px rgba(249, 115, 22, 0.08) !important; }
+.camp-card[data-stage="2"]:hover { box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08) !important; }
+.camp-card[data-stage="3"]:hover { box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08) !important; }
+.camp-card[data-stage="4"]:hover { box-shadow: 0 20px 40px rgba(139, 92, 246, 0.08) !important; }
+
+/* Card Header */
+.camp-card-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+}
+
+.camp-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.8rem !important;
+    flex-shrink: 0 !important;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.camp-card[data-stage="1"] .camp-icon { background: rgba(249, 115, 22, 0.08) !important; color: #f97316 !important; }
+.camp-card[data-stage="2"] .camp-icon { background: rgba(16, 185, 129, 0.08) !important; color: #10b981 !important; }
+.camp-card[data-stage="3"] .camp-icon { background: rgba(59, 130, 246, 0.08) !important; color: #3b82f6 !important; }
+.camp-card[data-stage="4"] .camp-icon { background: rgba(139, 92, 246, 0.08) !important; color: #8b5cf6 !important; }
+
+.camp-card:hover .camp-icon {
     transform: scale(1.1) rotate(5deg) !important;
 }
 
-#camps .hover-reveal-card[data-stage="1"]:hover .card-icon { background: #f97316 !important; color: #ffffff !important; }
-#camps .hover-reveal-card[data-stage="2"]:hover .card-icon { background: #10b981 !important; color: #ffffff !important; }
-#camps .hover-reveal-card[data-stage="3"]:hover .card-icon { background: #3b82f6 !important; color: #ffffff !important; }
-#camps .hover-reveal-card[data-stage="4"]:hover .card-icon { background: #8b5cf6 !important; color: #ffffff !important; }
+.camp-card[data-stage="1"]:hover .camp-icon { background: #f97316 !important; color: #ffffff !important; }
+.camp-card[data-stage="2"]:hover .camp-icon { background: #10b981 !important; color: #ffffff !important; }
+.camp-card[data-stage="3"]:hover .camp-icon { background: #3b82f6 !important; color: #ffffff !important; }
+.camp-card[data-stage="4"]:hover .camp-icon { background: #8b5cf6 !important; color: #ffffff !important; }
 
-#camps .content-wrapper {
-    flex: 1 !important;
+/* Card Title */
+.camp-card h3 {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    margin: 0 !important;
+    transition: color 0.3s ease !important;
+}
+
+.camp-card[data-stage="1"]:hover h3 { color: #f97316 !important; }
+.camp-card[data-stage="2"]:hover h3 { color: #10b981 !important; }
+.camp-card[data-stage="3"]:hover h3 { color: #3b82f6 !important; }
+.camp-card[data-stage="4"]:hover h3 { color: #8b5cf6 !important; }
+
+/* Card Body */
+.camp-card-body {
     display: flex !important;
     flex-direction: column !important;
-    text-align: right !important;
+    gap: 0.75rem !important;
+    flex-grow: 1 !important;
 }
 
-#camps h3 {
-    font-size: 1.45rem !important;
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    margin: 0 0 0.75rem 0 !important;
-    transition: all 0.3s ease !important;
-}
-
-#camps .hover-reveal-card[data-stage="1"]:hover h3 { color: #f97316 !important; }
-#camps .hover-reveal-card[data-stage="2"]:hover h3 { color: #10b981 !important; }
-#camps .hover-reveal-card[data-stage="3"]:hover h3 { color: #3b82f6 !important; }
-#camps .hover-reveal-card[data-stage="4"]:hover h3 { color: #8b5cf6 !important; }
-
-#camps p {
-    font-size: 1.05rem !important;
-    color: rgba(255, 255, 255, 0.65) !important;
+.camp-desc {
+    font-size: 1.1rem !important;
+    color: var(--text-muted) !important;
     line-height: 1.65 !important;
     margin: 0 !important;
-    max-height: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-    transition: all 0.3s ease !important;
 }
 
-#camps .hover-reveal-card:hover p {
-    color: rgba(255, 255, 255, 0.9) !important;
+.camp-example {
+    font-size: 0.95rem !important;
+    color: #64748b !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    line-height: 1.5 !important;
+    background: #f8fafc !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 12px !important;
+    border: 1px solid #f1f5f9 !important;
+    display: inline-block !important;
+    align-self: flex-start !important; /* Aligns to the right in RTL */
 }
 
-/* Responsive styles for types of camps */
+/* Responsive styles */
 @media (max-width: 991px) {
     #camps {
         padding: 5rem 2rem 4rem !important;
     }
-    #camps .grid-container {
+    #camps .camp-grid {
         gap: 1.5rem !important;
     }
-    #camps .hover-reveal-card {
-        padding: 2rem 1.8rem !important;
+    .camp-card {
+        padding: 2rem !important;
     }
 }
 
 @media (max-width: 768px) {
     #camps {
-        padding: 4rem 1.5rem 3rem !important;
+        padding: 4rem 1.5rem 3.5rem !important;
     }
-    #camps .grid-container {
+    #camps .camp-grid {
         grid-template-columns: 1fr !important;
         gap: 1.25rem !important;
     }
-    #camps .hover-reveal-card {
-        flex-direction: row !important;
-        align-items: flex-start !important;
-        padding: 1.8rem 1.5rem !important;
-        text-align: right !important;
-    }
-    #camps .card-icon {
-        width: 60px !important;
-        height: 60px !important;
-        font-size: 1.7rem !important;
-        margin: 0 !important;
+    .camp-card {
+        padding: 1.8rem !important;
     }
 }
 
 @media (max-width: 480px) {
-    #camps .hover-reveal-card {
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 1.2rem !important;
+    .camp-card {
         padding: 1.5rem 1.25rem !important;
+        gap: 1.2rem !important;
     }
-    #camps .card-icon {
-        width: 54px !important;
-        height: 54px !important;
+    .camp-card-header {
+        gap: 1rem !important;
+    }
+    .camp-icon {
+        width: 50px !important;
+        height: 50px !important;
         font-size: 1.5rem !important;
     }
+    .camp-card h3 {
+        font-size: 1.3rem !important;
+    }
+    .camp-desc {
+        font-size: 1rem !important;
+    }
+    .camp-example {
+        font-size: 0.88rem !important;
+        padding: 0.5rem 0.85rem !important;
+    }
 }
-
