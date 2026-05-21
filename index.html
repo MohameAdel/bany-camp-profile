@@ -372,443 +372,716 @@
         </section>
 
         <!-- Section 6.5: Previous Camps Gallery -->
-        <section id="previous-camps">
+        <section id="previous-camps" style="background: var(--bg-site); padding: 5rem 2rem; overflow: hidden;">
             <div class="section-header animate">
+                <span class="badge">معرض الصور</span>
                 <h2>من معسكرات باني السابقة</h2>
             </div>
-            <div class="camps-gallery-grid animate">
-                <!-- Card 1: China visual placeholder -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-china">
-                            <div class="gallery-center-icon">
-                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+            
+            <style>
+                .previous-camps-slider {
+                    max-width: 1150px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+                .previous-camps-track {
+                    display: flex;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    gap: 1.25rem;
+                    padding-bottom: 1rem;
+                    -ms-overflow-style: none;  
+                    scrollbar-width: none;  
+                }
+                .previous-camps-track::-webkit-scrollbar {
+                    display: none;
+                }
+                .previous-camps-slide {
+                    flex: 0 0 calc(33.333% - 0.85rem);
+                    scroll-snap-align: start;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+                    border: 1px solid rgba(0,0,0,0.03);
+                    position: relative;
+                }
+                .previous-camps-image {
+                    width: 100%;
+                    height: 260px;
+                    object-fit: cover;
+                    display: block;
+                    transition: transform 0.5s ease;
+                }
+                .previous-camps-slide:hover .previous-camps-image {
+                    transform: scale(1.05);
+                }
+                .previous-camps-controls {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+                .previous-camps-controls button {
+                    background: var(--bg-card);
+                    border: 1px solid #eef2f6;
+                    color: var(--primary-blue);
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+                }
+                .previous-camps-controls button:hover {
+                    background: var(--primary-green);
+                    color: white;
+                    border-color: var(--primary-green);
+                }
+                .previous-camps-pagination {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                    margin-top: 1.5rem;
+                }
+                .previous-camps-dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #cbd5e1;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .previous-camps-dot.active {
+                    background: var(--primary-green);
+                    width: 24px;
+                    border-radius: 4px;
+                }
+                @media (max-width: 900px) {
+                    .previous-camps-slide { flex: 0 0 calc(50% - 0.625rem); }
+                    .previous-camps-image { height: 230px; }
+                }
+                @media (max-width: 600px) {
+                    .previous-camps-slide { flex: 0 0 100%; }
+                    .previous-camps-image { height: 220px; }
+                    #previous-camps { padding: 4rem 1rem; }
+                }
+            </style>
+
+            <div class="previous-camps-slider animate" id="campsGallerySlider">
+                <div class="previous-camps-track" id="campsTrack" dir="rtl">
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-training-session.webp" alt="جلسة تدريبية ضمن معسكرات باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-field-flag.webp" alt="مشاركون في جولة ميدانية من معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-china-street-sign.webp" alt="تجربة ميدانية في الصين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-workshop-presentation.webp" alt="ورشة عمل ضمن معسكر الريادة التجارية" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-banner.webp" alt="صورة جماعية من معسكر باني في الصين" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-vests.webp" alt="زيارة ميدانية للأسواق ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-supplier-discussion.webp" alt="نقاش مع موردين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-saudi-delegation.webp" alt="وفد سعودي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-bus-trip.webp" alt="رحلة ميدانية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-guangzhou-road.webp" alt="جولة في مدينة قوانزو ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-evening-discussion.webp" alt="جلسة نقاش مسائية ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-tour.webp" alt="جولة سوقية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-industrial-market.webp" alt="زيارة سوق صناعي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-product-discussion.webp" alt="نقاش حول المنتجات والفرص التجارية" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-dinner.webp" alt="عشاء جماعي للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-business-meeting.webp" alt="اجتماع أعمال ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-registration-area.webp" alt="منطقة تسجيل المشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
                 </div>
 
-                <!-- Card 2: Riyadh visual placeholder -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-riyadh">
-                            <div class="gallery-center-icon">
-                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
-                                    <line x1="9" y1="22" x2="9" y2="16"></line>
-                                    <line x1="15" y1="22" x2="15" y2="16"></line>
-                                    <line x1="9" y1="16" x2="15" y2="16"></line>
-                                    <path d="M8 6h2v2H8V6zm0 4h2v2H8v-2zm0 4h2v2H8v-2zm6-8h2v2h-2V6zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
+                <div class="previous-camps-controls">
+                    <button id="campsPrevBtn" aria-label="السابق">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                    <button id="campsNextBtn" aria-label="التالي">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
                 </div>
-
-                <!-- Card 3: Dates visual placeholder -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-dates">
-                            <div class="gallery-center-icon">
-                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 2v20M17 5c-2 1-3.5 3.5-4 5M7 5c2 1 3.5 3.5 4 5M19 9c-2.5 1-4.5 4-5 6M5 9c2.5 1 4.5 4 5 6M21 14c-3 1-5.5 4.5-6 7M3 14c3 1 5.5 4.5 6 7"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Leaders visual placeholder -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-leaders">
-                            <div class="gallery-center-icon">
-                                <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"></path>
-                                    <rect x="5" y="18" width="14" height="2" rx="1"></rect>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5: Video visual placeholder 1 -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-video1">
-                            <div class="video-play-overlay">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6: Video visual placeholder 2 -->
-                <div class="gallery-card">
-                    <div class="gallery-image-wrapper">
-                        <div class="gallery-image-placeholder img-video2">
-                            <div class="video-play-overlay">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M8 5v14l11-7z"/>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <div class="previous-camps-pagination" id="campsPagination"></div>
             </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track = document.getElementById('campsTrack');
+                    const slides = Array.from(track.querySelectorAll('.previous-camps-slide'));
+                    const prevBtn = document.getElementById('campsPrevBtn');
+                    const nextBtn = document.getElementById('campsNextBtn');
+                    const pagination = document.getElementById('campsPagination');
+                    
+                    let currentIndex = 0;
+                    let autoPlayInterval;
+
+                    function getSlidesPerView() {
+                        if (window.innerWidth <= 600) return 1;
+                        if (window.innerWidth <= 900) return 2;
+                        return 3;
+                    }
+
+                    function generatePagination() {
+                        pagination.innerHTML = '';
+                        let spv = getSlidesPerView();
+                        let dotsCount = Math.max(1, slides.length - spv + 1);
+                        for(let i = 0; i < dotsCount; i++) {
+                            let dot = document.createElement('div');
+                            dot.className = 'previous-camps-dot' + (i === currentIndex ? ' active' : '');
+                            dot.addEventListener('click', () => {
+                                goToSlide(i);
+                                resetAutoplay();
+                            });
+                            pagination.appendChild(dot);
+                        }
+                    }
+
+                    function updatePagination() {
+                        Array.from(pagination.children).forEach((dot, index) => {
+                            dot.classList.toggle('active', index === currentIndex);
+                        });
+                    }
+
+                    function goToSlide(index) {
+                        let spv = getSlidesPerView();
+                        let maxIndex = Math.max(0, slides.length - spv);
+                        if (index < 0) index = maxIndex;
+                        if (index > maxIndex) index = 0;
+                        
+                        currentIndex = index;
+                        // In RTL, scrollIntoView with inline: 'start' aligns the right edge perfectly
+                        slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                        updatePagination();
+                    }
+
+                    function startAutoplay() {
+                        autoPlayInterval = setInterval(() => {
+                            let spv = getSlidesPerView();
+                            let maxIndex = Math.max(0, slides.length - spv);
+                            if(currentIndex >= maxIndex) {
+                                goToSlide(0);
+                            } else {
+                                goToSlide(currentIndex + 1);
+                            }
+                        }, 3500);
+                    }
+                    
+                    function stopAutoplay() {
+                        clearInterval(autoPlayInterval);
+                    }
+                    function resetAutoplay() {
+                        stopAutoplay();
+                        startAutoplay();
+                    }
+
+                    nextBtn.addEventListener('click', () => { goToSlide(currentIndex + 1); resetAutoplay(); });
+                    prevBtn.addEventListener('click', () => { goToSlide(currentIndex - 1); resetAutoplay(); });
+
+                    track.addEventListener('mouseenter', stopAutoplay);
+                    track.addEventListener('mouseleave', startAutoplay);
+                    track.addEventListener('touchstart', stopAutoplay, {passive: true});
+                    track.addEventListener('touchend', startAutoplay, {passive: true});
+
+                    let intersectingIndices = new Set();
+                    const trackObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            const idx = slides.indexOf(entry.target);
+                            if (entry.isIntersecting) {
+                                intersectingIndices.add(idx);
+                            } else {
+                                intersectingIndices.delete(idx);
+                            }
+                        });
+                        if (intersectingIndices.size > 0) {
+                            currentIndex = Math.min(...Array.from(intersectingIndices));
+                            updatePagination();
+                        }
+                    }, { root: track, threshold: 0.5 });
+                    
+                    slides.forEach(slide => trackObserver.observe(slide));
+
+                    window.addEventListener('resize', () => {
+                        generatePagination();
+                        goToSlide(currentIndex);
+                    });
+
+                    generatePagination();
+                    startAutoplay();
+                });
+            </script>
         </section>
 
         <!-- Section 6: Economic Impact -->
-        <section id="impact">
+        <section id="impact" style="background: var(--bg-site); padding: 5rem 2rem;">
             <div class="section-header animate">
                 <span class="badge">الأثر الاقتصادي والاستراتيجي</span>
                 <h2>الأثر الاقتصادي لدعم هذا المعسكر</h2>
                 <p>دعم معسكرات باني لا يعني دعم تجربة تعليمية فقط، بل دعم مسار يساعد على بناء مشاريع أكثر وعيًا، قرارات أكثر نضجًا، وفرص تجارية قابلة للنمو.</p>
             </div>
 
-            <div class="grid-container" style="grid-template-columns: repeat(3, 1fr);">
-                <!-- Card 1 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                            <polyline points="16 7 22 7 22 13"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">رفع جودة قرارات رواد الأعمال</h3>
-                    <p class="strategic-card-desc">تزويد المشاركين بمنهجيات تحليل عملية مبنية على واقع السوق الفعلي لدعم قرارات استثمارية مدروسة.</p>
-                </div>
+            <style>
+                .impact-rows-container {
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.25rem;
+                }
+                .impact-row {
+                    background: var(--bg-card);
+                    border: 1px solid #eef2f6;
+                    border-radius: 12px;
+                    padding: 1.25rem 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    transition: all 0.3s ease;
+                }
+                .impact-row:hover {
+                    border-color: var(--primary-green);
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                    transform: translateX(-5px);
+                }
+                .impact-row svg {
+                    color: var(--primary-green);
+                    flex-shrink: 0;
+                }
+                .impact-row span {
+                    font-size: 1.05rem;
+                    font-weight: 700;
+                    color: var(--text-main);
+                }
+                @media (max-width: 768px) {
+                    .impact-rows-container {
+                        grid-template-columns: 1fr;
+                        gap: 1rem;
+                    }
+                    #impact {
+                        padding: 4rem 1.5rem;
+                    }
+                    .impact-row {
+                        padding: 1rem 1.25rem;
+                    }
+                }
+            </style>
 
-                <!-- Card 2 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="12"></line>
-                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">تقليل الهدر الناتج عن التجارب العشوائية</h3>
-                    <p class="strategic-card-desc">حماية رأس المال من التجريب غير المدروس عبر الفحص الميداني، فحص الجودة، والمقارنة المباشرة.</p>
+            <div class="impact-rows-container">
+                <div class="impact-row animate">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>رفع جودة قرارات رواد الأعمال</span>
                 </div>
-
-                <!-- Card 3 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">بناء مشاريع أكثر قابلية للاستمرار</h3>
-                    <p class="strategic-card-desc">تأسيس ركائز تجارية متينة وإدارة تشغيلية واعية تضمن بقاء المشروع ونموه في منافسة السوق.</p>
+                <div class="impact-row animate" style="transition-delay: 0.1s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>تقليل الهدر الناتج عن التجارب العشوائية</span>
                 </div>
-
-                <!-- Card 4 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
-                            <path d="M2 12h20"></path>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">تعزيز ارتباط الرواد بالأسواق العالمية</h3>
-                    <p class="strategic-card-desc">ربط مباشر بسلاسل التوريد والأسواق الدولية وتسهيل عمليات التوريد والاستيراد من المصادر الموثوقة.</p>
+                <div class="impact-row animate" style="transition-delay: 0.2s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>بناء مشاريع أكثر قابلية للاستمرار</span>
                 </div>
-
-                <!-- Card 5 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">دعم انتقال المعرفة إلى تطبيق فعلي</h3>
-                    <p class="strategic-card-desc">تحويل النظريات الأكاديمية وخطط العمل الورقية إلى تجارب وممارسات واقعية ميدانية فورية.</p>
+                <div class="impact-row animate" style="transition-delay: 0.3s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>تعزيز ارتباط رواد الأعمال بالأسواق العالمية</span>
                 </div>
-
-                <!-- Card 6 -->
-                <div class="strategic-card animate">
-                    <div class="strategic-card-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="strategic-card-title">خلق فرص تجارية وشراكات أوسع</h3>
-                    <p class="strategic-card-desc">دمج رواد الأعمال في شبكة توريد محلية ودولية تعزز تحالفاتهم وتفتح آفاقًا جديدة للشراكة والاستثمار.</p>
+                <div class="impact-row animate" style="transition-delay: 0.4s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>دعم انتقال المعرفة إلى تطبيق فعلي</span>
+                </div>
+                <div class="impact-row animate" style="transition-delay: 0.5s;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    <span>خلق فرص تجارية وشراكات أوسع</span>
                 </div>
             </div>
         </section>
 
         <!-- Section 7: Flexibility & Customization -->
-        <section id="flexibility" style="background: var(--ice-blue);">
-            <div class="section-header">
-                <span class="badge">تخصيص المسار</span>
-                <h2>نموذج معسكرات مرن وقابل للتخصيص</h2>
-                <p>نحن لا نقدم نماذج ثابتة فقط ..<br>بل نقدم خدمة تصميم معسكرات وفق:</p>
-            </div>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>طبيعة المشاركين</h3>
-                    <p>(مبتدئ / صاحب مشروع / مستثمر)</p>
-                </div>
-                <div class="card">
-                    <h3>القطاع المستهدف</h3>
-                    <p>(تجارة – صناعة – خدمات)</p>
-                </div>
-                <div class="card">
-                    <h3>السوق المستهدف</h3>
-                    <p>(محلي – دولي – أسواق محددة)</p>
-                </div>
-            </div>
-            <p style="text-align: center; margin-top: 2rem; font-style: italic; color: var(--primary-blue);">كل معسكر
-                يتم تصميمه ليحقق أعلى أثر ممكن للفئة المستهدفة</p>
-        </section>
-
-        <!-- Section 7: Execution Models -->
-        <section id="execution">
-            <div class="section-header">
-                <span class="badge">نماذج التنفيذ</span>
-                <h2>آليات تنفيذ مرنة... تناسب كل هدف</h2>
-                <p>المعسكرات لا تُنفذ بطريقة واحدة، بل بعدة نماذج حسب طبيعة البرنامج والمشاركين.</p>
-            </div>
+        <section id="flexibility" style="background: var(--bg-site); padding: 5rem 2rem;">
             <style>
-                #execution {
-                    background: var(--bg-site);
-                    padding: 5rem 2rem;
+                .flex-container {
+                    max-width: 1100px;
+                    margin: 0 auto;
                 }
-
-                /* Local grid */
-                .exec-new-grid {
+                .flex-header {
+                    text-align: center;
+                    margin-bottom: 3.5rem;
+                }
+                .flex-header .badge {
+                    display: inline-block;
+                    font-size: 0.95rem;
+                    color: var(--primary-green);
+                    background: rgba(16, 185, 129, 0.1);
+                    padding: 0.4rem 1.2rem;
+                    border-radius: 8px;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                .flex-header h2 {
+                    font-size: 2.2rem;
+                    color: var(--primary-blue);
+                    margin-bottom: 1rem;
+                    font-weight: 800;
+                }
+                .flex-header p {
+                    font-size: 1.15rem;
+                    color: var(--text-main);
+                    max-width: 750px;
+                    margin: 0 auto;
+                    line-height: 1.8;
+                }
+                .flex-grid {
                     display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                    gap: 1.25rem;
-                    width: 100%;
-                    max-width: 1300px;
-                    margin: 2.5rem auto 0;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5rem;
                 }
-
-                /* Responsive Grid Breaks */
-                @media (max-width: 1200px) {
-                    .exec-new-grid {
-                        grid-template-columns: repeat(3, 1fr);
-                        gap: 1.2rem;
-                    }
-                }
-
-                @media (max-width: 768px) {
-                    .exec-new-grid {
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 1rem;
-                    }
-                }
-
-                @media (max-width: 500px) {
-                    .exec-new-grid {
-                        grid-template-columns: 1fr;
-                        gap: 1rem;
-                    }
-                }
-
-                /* Card Styling */
-                .exec-premium-card {
+                .flex-item {
                     background: var(--bg-card);
-                    border: 1px solid rgba(37, 99, 235, 0.06);
-                    border-radius: 20px;
-                    padding: 1.5rem;
-                    box-shadow: var(--shadow-soft);
+                    border: 1px solid #eef2f6;
+                    padding: 1.5rem 2rem;
+                    border-radius: 16px;
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    text-align: right;
-                    transition: var(--transition);
-                    position: relative;
-                    height: auto;
-                    overflow: hidden;
+                    align-items: center;
+                    gap: 1.25rem;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
                 }
-
-                .exec-premium-card:hover {
-                    transform: translateY(-6px);
-                    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.06);
+                .flex-item:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+                    border-color: var(--primary-blue);
                 }
-
-                /* Icon style */
-                .exec-card-icon-wrapper {
-                    width: 44px;
-                    height: 44px;
+                .flex-icon {
+                    width: 48px;
+                    height: 48px;
                     border-radius: 12px;
+                    background: rgba(37, 99, 235, 0.05);
+                    color: var(--primary-blue);
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom: 1.25rem;
+                    flex-shrink: 0;
                 }
-
-                /* Dynamic color systems based on cards */
-                .exec-card-blue .exec-card-icon-wrapper { background: rgba(37, 99, 235, 0.08); color: var(--primary-blue); }
-                .exec-card-blue:hover { border-color: var(--primary-blue); }
-
-                .exec-card-green .exec-card-icon-wrapper { background: rgba(16, 185, 129, 0.08); color: var(--primary-green); }
-                .exec-card-green:hover { border-color: var(--primary-green); }
-
-                .exec-card-orange .exec-card-icon-wrapper { background: rgba(249, 115, 22, 0.08); color: #f97316; }
-                .exec-card-orange:hover { border-color: #f97316; }
-
-                .exec-card-purple .exec-card-icon-wrapper { background: rgba(139, 92, 246, 0.08); color: #8b5cf6; }
-                .exec-card-purple:hover { border-color: #8b5cf6; }
-
-                .exec-card-teal .exec-card-icon-wrapper { background: rgba(20, 184, 166, 0.08); color: #14b8a6; }
-                .exec-card-teal:hover { border-color: #14b8a6; }
-
-                /* Tag / Badge */
-                .exec-card-tag {
-                    font-size: 0.75rem;
-                    font-weight: 700;
-                    padding: 0.25rem 0.65rem;
-                    border-radius: 6px;
-                    margin-bottom: 0.75rem;
-                    display: inline-block;
-                    width: fit-content;
-                }
-
-                .exec-card-blue .exec-card-tag { background: rgba(37, 99, 235, 0.06); color: var(--primary-blue); }
-                .exec-card-green .exec-card-tag { background: rgba(16, 185, 129, 0.06); color: var(--primary-green); }
-                .exec-card-orange .exec-card-tag { background: rgba(249, 115, 22, 0.06); color: #f97316; }
-                .exec-card-purple .exec-card-tag { background: rgba(139, 92, 246, 0.06); color: #8b5cf6; }
-                .exec-card-teal .exec-card-tag { background: rgba(20, 184, 166, 0.06); color: #14b8a6; }
-
-                /* Typography */
-                .exec-card-title {
+                .flex-item-title {
                     font-size: 1.15rem;
                     font-weight: 700;
-                    color: var(--text-main);
-                    margin: 0.5rem 0;
+                    color: var(--primary-blue);
+                    margin: 0;
                     line-height: 1.4;
                 }
-
-                .exec-card-desc {
-                    font-size: 0.9rem;
-                    color: var(--text-muted);
-                    line-height: 1.5;
-                    margin: 0;
+                .flex-item-full {
+                    grid-column: 1 / -1;
+                    background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+                    color: white;
+                    padding: 2.5rem;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    margin-top: 1rem;
+                    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
                 }
-
-                /* Mobile responsive resets */
-                @media (max-width: 768px) {
-                    #execution {
-                        padding: 3rem 1.25rem 2.5rem !important;
+                .flex-item-full .flex-item-title {
+                    color: white;
+                    font-size: 1.4rem;
+                    flex: 1;
+                }
+                .flex-item-full .flex-icon {
+                    background: rgba(255,255,255,0.15);
+                    color: white;
+                    width: 60px;
+                    height: 60px;
+                }
+                @media (max-width: 900px) {
+                    .flex-grid {
+                        grid-template-columns: 1fr;
                     }
-                    .exec-new-grid {
-                        margin-top: 1.5rem !important; /* Immediately follow subtitle */
+                    .flex-item-full {
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 1.5rem;
+                        padding: 2rem;
                     }
-                    .exec-premium-card {
-                        padding: 1.25rem !important;
-                    }
-                    .exec-card-icon-wrapper {
-                        margin-bottom: 0.75rem !important;
-                    }
-                    .exec-card-title {
-                        font-size: 1.05rem !important;
-                        margin: 0.4rem 0 !important;
-                    }
-                    .exec-card-desc {
-                        font-size: 0.85rem !important;
+                }
+                @media (max-width: 600px) {
+                    #flexibility {
+                        padding: 4rem 1.5rem;
                     }
                 }
             </style>
             
-            <div class="exec-new-grid">
-                <!-- Card 1 -->
-                <div class="exec-premium-card exec-card-blue">
-                    <div class="exec-card-icon-wrapper">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </div>
-                    <span class="exec-card-tag">دولية</span>
-                    <h3 class="exec-card-title">معسكرات خارجية</h3>
-                    <p class="exec-card-desc">تجارب ميدانية في أسواق عالمية لفهم الموردين، المنتجات، والفرص على أرض الواقع.</p>
+            <div class="flex-container">
+                <div class="flex-header animate">
+                    <span class="badge">تخصيص المسار</span>
+                    <h2>نموذج معسكرات مرن وقابل للتخصيص</h2>
+                    <p>لا تعمل باني بنموذج واحد ثابت، بل يتم تصميم المعسكر حسب طبيعة المشاركين، القطاع المستهدف، السوق المراد فهمه، وهدف الجهة أو الفئة المشاركة.</p>
                 </div>
-
-                <!-- Card 2 -->
-                <div class="exec-premium-card exec-card-green">
-                    <div class="exec-card-icon-wrapper">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
-                            <path d="M7 22V14h10v8"></path>
-                            <line x1="9" y1="18" x2="9" y2="18.01"></line>
-                            <line x1="15" y1="18" x2="15" y2="18.01"></line>
-                            <path d="M9 10h6"></path>
-                            <path d="M9 6h6"></path>
-                        </svg>
+                
+                <div class="flex-grid">
+                    <div class="flex-item animate">
+                        <div class="flex-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="flex-item-title">حسب طبيعة المشاركين</h3>
                     </div>
-                    <span class="exec-card-tag">محلية</span>
-                    <h3 class="exec-card-title">معسكرات داخلية</h3>
-                    <p class="exec-card-desc">برامج حضورية محلية تُصمم حسب القطاع والهدف التدريبي.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="exec-premium-card exec-card-purple">
-                    <div class="exec-card-icon-wrapper">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
+                    
+                    <div class="flex-item animate" style="transition-delay: 0.1s;">
+                        <div class="flex-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <h3 class="flex-item-title">حسب القطاع المستهدف</h3>
                     </div>
-                    <span class="exec-card-tag">داخلي + خارجي</span>
-                    <h3 class="exec-card-title">معسكرات هجينة</h3>
-                    <p class="exec-card-desc">دمج بين التأهيل الداخلي والتطبيق الخارجي لربط المعرفة بالتجربة.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="exec-premium-card exec-card-teal">
-                    <div class="exec-card-icon-wrapper">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="2" y1="20" x2="22" y2="20"></line>
-                            <line x1="12" y1="17" x2="12" y2="20"></line>
-                        </svg>
+                    
+                    <div class="flex-item animate" style="transition-delay: 0.2s;">
+                        <div class="flex-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="flex-item-title">حسب السوق المراد فهمه</h3>
                     </div>
-                    <span class="exec-card-tag">مرنة</span>
-                    <h3 class="exec-card-title">برامج أونلاين + تطبيق ميداني</h3>
-                    <p class="exec-card-desc">تأهيل معرفي عن بُعد يتبعه تطبيق عملي في السوق.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="exec-premium-card exec-card-orange">
-                    <div class="exec-card-icon-wrapper">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
+                    
+                    <div class="flex-item animate" style="transition-delay: 0.3s;">
+                        <div class="flex-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="flex-item-title">حسب هدف الجهة أو الفئة المشاركة</h3>
                     </div>
-                    <span class="exec-card-tag">ورش + متابعة</span>
-                    <h3 class="exec-card-title">برامج حضورية دورية</h3>
-                    <p class="exec-card-desc">ورش ومتابعات مستمرة لتحويل المعرفة إلى خطوات تنفيذية.</p>
+                    
+                    <div class="flex-item-full animate" style="transition-delay: 0.4s;">
+                        <h3 class="flex-item-title">قابل للتخصيص لرواد الأعمال، التجار، الشركات، الجهات، أو الفرق القيادية</h3>
+                        <div class="flex-icon">
+                            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <p style="text-align: center; margin-top: 2.5rem; font-weight: 700; color: var(--primary-blue); font-size: 1.15rem; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
-                الهدف: تصميم التجربة بما يخدم طبيعة المشاركين ونتيجة البرنامج.
-            </p>
         </section>
 
-        <!-- Section 9: Why Applied Solution -->
+        <!-- Section 7: Execution Models -->
+        <section id="execution" style="background: var(--bg-site); padding: 5rem 2rem;">
+            <div class="section-header animate">
+                <span class="badge">نماذج التنفيذ</span>
+                <h2>آليات تنفيذ مرنة</h2>
+                <p>تُنفذ معسكرات باني بطرق متعددة تناسب طبيعة المشاركين، أهداف الجهة، ونوع التجربة المطلوبة.</p>
+            </div>
+            
+            <style>
+                .exec-grid-cards {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1.5rem;
+                    max-width: 1100px;
+                    margin: 0 auto;
+                }
+                .exec-card-item {
+                    background: var(--bg-card);
+                    border: 1px solid #eef2f6;
+                    border-radius: 16px;
+                    padding: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.25rem;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .exec-card-item:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+                    border-color: var(--primary-blue);
+                }
+                .exec-icon-box {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 12px;
+                    background: rgba(37, 99, 235, 0.06);
+                    color: var(--primary-blue);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-shrink: 0;
+                }
+                .exec-card-item h3 {
+                    font-size: 1.1rem;
+                    font-weight: 700;
+                    color: var(--text-main);
+                    margin: 0;
+                    line-height: 1.4;
+                }
+                @media (max-width: 1024px) {
+                    .exec-grid-cards { grid-template-columns: repeat(2, 1fr); }
+                }
+                @media (max-width: 600px) {
+                    #execution { padding: 4rem 1.5rem; }
+                    .exec-grid-cards { grid-template-columns: 1fr; gap: 1rem; }
+                }
+            </style>
+
+            <div class="exec-grid-cards">
+                <div class="exec-card-item animate">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                    <h3>معسكرات خارجية في أسواق عالمية</h3>
+                </div>
+                <div class="exec-card-item animate" style="transition-delay: 0.1s;">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                    <h3>معسكرات داخلية</h3>
+                </div>
+                <div class="exec-card-item animate" style="transition-delay: 0.2s;">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+                    <h3>معسكرات هجينة</h3>
+                </div>
+                <div class="exec-card-item animate" style="transition-delay: 0.3s;">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                    <h3>برامج أونلاين مع تطبيق ميداني</h3>
+                </div>
+                <div class="exec-card-item animate" style="transition-delay: 0.4s;">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                    <h3>برامج حضورية دورية</h3>
+                </div>
+                <div class="exec-card-item animate" style="transition-delay: 0.5s;">
+                    <div class="exec-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></div>
+                    <h3>تجارب مصممة حسب القطاع أو الهدف</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section X: China Entrepreneurship Camp -->
+        <section id="china-camp" style="background: var(--ice-blue);">
+            <style>
+                #china-camp { padding: 6rem 2rem; }
+                .china-camp-wrapper {
+                    display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+                    width: 100%; max-width: 1150px; background: var(--bg-card);
+                    border-radius: 24px; padding: 4rem; box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+                    gap: 4rem; border: 1px solid #eef2f6; margin: 0 auto;
+                }
+                .china-camp-text-col { max-width: 520px; text-align: right; }
+                .china-badge {
+                    display: inline-block; font-size: 0.95rem; color: var(--primary-green);
+                    background: rgba(16, 185, 129, 0.1); padding: 0.35rem 1rem;
+                    border-radius: 8px; font-weight: 700; margin-bottom: 1.25rem;
+                }
+                .china-title {
+                    font-size: 2.4rem; color: var(--primary-blue); line-height: 1.3;
+                    font-weight: 800; margin-bottom: 1.25rem;
+                }
+                .china-desc {
+                    font-size: 1.1rem; line-height: 1.8; color: var(--text-main); margin-bottom: 2rem;
+                }
+                .china-bullets-grid {
+                    display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; margin-bottom: 2.5rem;
+                }
+                .china-bullet {
+                    display: flex; align-items: flex-start; gap: 0.75rem;
+                    font-size: 0.95rem; font-weight: 700; color: var(--text-main); line-height: 1.5;
+                }
+                .china-bullet svg { flex-shrink: 0; color: var(--primary-green); margin-top: 0.1rem; }
+                .china-visual-col { display: flex; flex-direction: column; gap: 1.25rem; width: 100%; }
+                .cv-card {
+                    background: var(--bg-site); padding: 1.5rem; border-radius: 16px;
+                    border: 1px solid #eef2f6; display: flex; align-items: center; gap: 1rem;
+                }
+                .cv-card-main {
+                    background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+                    color: white; border: none; flex-direction: column; align-items: flex-start;
+                    padding: 2.5rem 2rem; box-shadow: 0 10px 30px rgba(37, 99, 235, 0.15);
+                }
+                .cv-card-main h3 { color: white; font-size: 1.4rem; margin-bottom: 0.5rem; line-height: 1.4; }
+                .cv-card-main p { color: rgba(255, 255, 255, 0.9); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+                .cv-icon {
+                    width: 50px; height: 50px; border-radius: 12px; background: white;
+                    color: var(--primary-blue); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+                }
+                .cv-card-main .cv-icon { background: rgba(255, 255, 255, 0.15); color: white; margin-bottom: 1.25rem; }
+                .cv-card-title { font-size: 1.1rem; font-weight: 700; color: var(--primary-blue); margin: 0; }
+
+                @media (max-width: 1024px) {
+                    .china-camp-wrapper { padding: 3rem; gap: 3rem; }
+                }
+                @media (max-width: 900px) {
+                    .china-camp-wrapper { grid-template-columns: 1fr; }
+                    .china-camp-text-col { max-width: 100%; }
+                }
+                @media (max-width: 600px) {
+                    #china-camp { padding: 4rem 1rem; }
+                    .china-camp-wrapper { padding: 2rem; gap: 2.5rem; }
+                    .china-bullets-grid { grid-template-columns: 1fr; }
+                }
+            </style>
+
+            <div class="china-camp-wrapper">
+                <div class="china-camp-text-col animate">
+                    <span class="china-badge">أحد أبرز معسكرات باني التطبيقية</span>
+                    <h2 class="china-title">معسكر الريادة التجارية<br>بالصين</h2>
+                    <p class="china-desc">
+                        يأخذ معسكر الريادة التجارية بالصين المشاركين إلى قلب السوق، حيث يتعرفون على الموردين، المصانع، المنتجات، وآليات التفاوض والتسعير وفحص الجودة من خلال تجربة ميدانية مباشرة.
+                    </p>
+                    
+                    <div class="china-bullets-grid">
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>زيارات ميدانية للأسواق والمصانع</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>مقابلات مع موردين ومصنعين</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>ورش يومية لتحليل الفرص</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>تدريب عملي على التفاوض</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>فهم التسعير وسلاسل التوريد</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قرارات تجارية واضحة</div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; padding: 0.8rem 1.8rem; border-radius: 50px;">
+                        عرض صفحة معسكر الصين كاملة
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    </a>
+                </div>
+
+                <div class="china-visual-col animate" style="transition-delay: 0.2s;">
+                    <div class="cv-card cv-card-main">
+                        <div class="cv-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3>تجربة ميدانية متكاملة</h3>
+                        <p>الاحتكاك المباشر بالسوق الصيني لبناء علاقات وفهم عميق للعمليات التجارية من المصدر.</p>
+                    </div>
+                    
+                    <div class="cv-card">
+                        <div class="cv-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-green);">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="cv-card-title">تطبيق فوري للقرارات</h3>
+                    </div>
+                    
+                    <div class="cv-card">
+                        <div class="cv-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <h3 class="cv-card-title">بناء شراكات مباشرة</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Section 9: Why Applied Solution -->
         <section id="applied-solution" style="background: var(--bg-site);">
             <div class="section-header animate">
                 <span class="badge">نهاية التنظير</span>
@@ -886,116 +1159,119 @@
         </section>
 
         <!-- Section 9: Actual Impact -->
-        <section id="actual-impact">
+        <section id="actual-impact" style="background: var(--ice-blue); padding: 5rem 2rem;">
             <div class="section-header animate">
                 <span class="badge">المقارنة الاستراتيجية</span>
                 <h2>لماذا المعسكرات التطبيقية هي الحل؟</h2>
                 <p>توضيح الفرق الجوهري بين التعلم النظري والتجربة الحقيقية داخل السوق.</p>
             </div>
 
+            <style>
+                .comparison-box {
+                    max-width: 900px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1.5rem;
+                }
+                .comp-card {
+                    background: var(--bg-site);
+                    border-radius: 16px;
+                    padding: 2.5rem 2rem;
+                    border: 1px solid #eef2f6;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+                }
+                .comp-card.theory {
+                    border-top: 4px solid #ef4444;
+                }
+                .comp-card.practice {
+                    border-top: 4px solid var(--primary-green);
+                    background: var(--bg-card);
+                }
+                .comp-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.75rem;
+                    margin-bottom: 2rem;
+                }
+                .comp-header h3 {
+                    font-size: 1.3rem;
+                    font-weight: 800;
+                    margin: 0;
+                    color: var(--text-main);
+                }
+                .comp-list {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.25rem;
+                }
+                .comp-item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0.75rem;
+                    font-size: 1.05rem;
+                    color: var(--text-main);
+                    font-weight: 600;
+                    line-height: 1.5;
+                }
+                .comp-item svg {
+                    flex-shrink: 0;
+                    margin-top: 0.15rem;
+                }
+                .comp-closing {
+                    text-align: center;
+                    max-width: 750px;
+                    margin: 3rem auto 0;
+                    font-size: 1.15rem;
+                    font-weight: 700;
+                    color: var(--primary-blue);
+                    line-height: 1.8;
+                    background: var(--bg-site);
+                    padding: 1.5rem 2rem;
+                    border-radius: 12px;
+                    border: 1px solid #eef2f6;
+                }
+                @media (max-width: 768px) {
+                    .comparison-box { grid-template-columns: 1fr; gap: 1.5rem; }
+                    #actual-impact { padding: 4rem 1.5rem; }
+                    .comp-card { padding: 2rem 1.5rem; }
+                    .comp-closing { font-size: 1rem; padding: 1.25rem; margin-top: 2rem; }
+                }
+            </style>
 
-            <div class="comparison-container">
-                <!-- Right Side: Theoretical Learning -->
-                <div class="comparison-column theory animate">
-                    <div class="comparison-col-header">
-                        <div class="comparison-col-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="comparison-col-title">التعلم النظري</h3>
+            <div class="comparison-box">
+                <!-- Right Side: Theoretical -->
+                <div class="comp-card theory animate">
+                    <div class="comp-header">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                        <h3>تعلم نظري</h3>
                     </div>
-                    <ul class="comparison-list">
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: #ef4444;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </div>
-                            <span>معلومات كثيرة</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: #ef4444;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </div>
-                            <span>قرارات غير مختبرة</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: #ef4444;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </div>
-                            <span>فهم محدود للسوق</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: #ef4444;">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </div>
-                            <span>اعتماد على التخمين</span>
-                        </li>
+                    <ul class="comp-list">
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>معرفة بدون تجربة</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>قرارات غير مختبرة</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>اعتماد على التخمين</li>
                     </ul>
                 </div>
 
-                <!-- Left Side: Practical Experience -->
-                <div class="comparison-column practice animate">
-                    <div class="comparison-col-header">
-                        <div class="comparison-col-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                                <polyline points="2 17 12 22 22 17"></polyline>
-                                <polyline points="2 12 12 17 22 12"></polyline>
-                            </svg>
-                        </div>
-                        <h3 class="comparison-col-title">تجربة تطبيقية</h3>
+                <!-- Left Side: Practical -->
+                <div class="comp-card practice animate" style="transition-delay: 0.1s;">
+                    <div class="comp-header">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        <h3>تجربة تطبيقية</h3>
                     </div>
-                    <ul class="comparison-list">
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: var(--primary-green);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span>احتكاك مباشر بالسوق</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: var(--primary-green);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span>مقارنة حقيقية بين الفرص</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: var(--primary-green);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span>تفاوض وتجربة وملاحظة</span>
-                        </li>
-                        <li class="comparison-item">
-                            <div class="comparison-item-icon" style="color: var(--primary-green);">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                                </svg>
-                            </div>
-                            <span>قرارات مبنية على فهم</span>
-                        </li>
+                    <ul class="comp-list">
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>رؤية مباشرة للسوق</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>مقارنة حقيقية بين الفرص</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>تفاوض وتجربة وملاحظة</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قرارات مبنية على فهم</li>
                     </ul>
                 </div>
             </div>
-
-            <p style="text-align: center; margin-top: 2.5rem; font-weight: 600; color: var(--primary-blue); font-size: 1.1rem; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; font-style: italic; padding: 0 1rem;">
+            
+            <p class="comp-closing animate" style="transition-delay: 0.2s;">
                 لأن رائد الأعمال لا يحتاج إلى معرفة فقط، بل يحتاج إلى تجربة تجعله يرى، يقارن، يسأل، يفاوض، ويقرر.
             </p>
         </section>
@@ -1106,22 +1382,84 @@
         </section>
 
         <!-- Section 12: Sustainability -->
-        <section id="sustainability" style="background: var(--bg-site);">
-            <div class="section-header animate">
-                <span class="badge">الاستدامة والأثر</span>
+        <section id="sustainability" style="background: var(--bg-site); padding: 5rem 2rem;">
+            <style>
+                .sus-panel {
+                    max-width: 900px;
+                    margin: 0 auto;
+                    background: linear-gradient(135deg, #0f172a, var(--primary-blue));
+                    border-radius: 20px;
+                    padding: 4rem 3rem;
+                    text-align: center;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+                    color: white;
+                }
+                .sus-panel-badge {
+                    display: inline-block;
+                    background: rgba(255,255,255,0.1);
+                    color: #e2e8f0;
+                    padding: 0.4rem 1.25rem;
+                    border-radius: 50px;
+                    font-size: 0.95rem;
+                    font-weight: 700;
+                    margin-bottom: 1.5rem;
+                }
+                .sus-panel h2 {
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    margin-bottom: 1.5rem;
+                    color: white;
+                }
+                .sus-panel p {
+                    font-size: 1.15rem;
+                    line-height: 1.8;
+                    color: rgba(255,255,255,0.9);
+                    max-width: 700px;
+                    margin: 0 auto 2.5rem;
+                }
+                .sus-chips-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 0.75rem;
+                }
+                .sus-chip {
+                    background: rgba(255,255,255,0.15);
+                    border: 1px solid rgba(255,255,255,0.1);
+                    padding: 0.6rem 1.25rem;
+                    border-radius: 8px;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    backdrop-filter: blur(5px);
+                }
+                .sus-chip svg {
+                    color: var(--primary-green);
+                }
+                @media (max-width: 768px) {
+                    #sustainability { padding: 4rem 1.5rem; }
+                    .sus-panel { padding: 3rem 1.5rem; }
+                    .sus-panel h2 { font-size: 1.75rem; }
+                    .sus-panel p { font-size: 1.05rem; }
+                    .sus-chips-container { flex-direction: column; align-items: stretch; }
+                    .sus-chip { justify-content: center; }
+                }
+            </style>
+
+            <div class="sus-panel animate">
+                <span class="sus-panel-badge">نموذج مستدام</span>
                 <h2>نموذج مستدام وليس تجربة مؤقتة</h2>
                 <p>منظومة معسكرات باني ليست فعالية عابرة، بل نموذج قابل للتكرار، التطوير، والتخصيص حسب احتياج السوق والجهات المشاركة.</p>
-            </div>
-            <div class="sustainability-container animate">
-                <div class="statement-card">
-                    <p class="statement-text">منظومة معسكرات باني ليست فعالية عابرة، بل نموذج قابل للتكرار، التطوير، والتخصيص حسب احتياج السوق والجهات المشاركة.</p>
-                </div>
-                <div class="sustainability-badges">
-                    <span class="sus-badge">🔄 قابل للتكرار</span>
-                    <span class="sus-badge">📈 قابل للتطوير</span>
-                    <span class="sus-badge">⚙️ قابل للتخصيص</span>
-                    <span class="sus-badge">🌍 قابل للتوسع في قطاعات وأسواق مختلفة</span>
-                    <span class="sus-badge">🛡️ أثر طويل المدى</span>
+                
+                <div class="sus-chips-container">
+                    <span class="sus-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قابل للتكرار</span>
+                    <span class="sus-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قابل للتطوير</span>
+                    <span class="sus-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قابل للتخصيص</span>
+                    <span class="sus-chip"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قابل للتوسع في قطاعات وأسواق مختلفة</span>
+                    <span class="sus-chip" style="background: rgba(16, 185, 129, 0.2); border-color: rgba(16, 185, 129, 0.4);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>يبني أثرًا طويل المدى بدلًا من تجربة مؤقتة</span>
                 </div>
             </div>
         </section>
