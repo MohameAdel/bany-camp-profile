@@ -43,7 +43,7 @@
                 <span class="badge">معسكرات باني للريادة التجارية والصناعية</span>
                 <h1 style="color: var(--primary-blue);">استثمار في بناء <span style="color: var(--primary-green);">جيل
                         تجاري</span> حقيقي</h1>
-                <p style="color: var(--text-main);">نحن لا نقدم برامج تدريبية…<br>نحن نبني عقلية قادرة على الدخول للسوق
+                <p style="color: var(--text-main);">أكثر من مجرد برامج تدريبية<br>في باني، نبني عقلية قادرة على دخول السوق
                     بثقة وتحقيق نتائج فعلية.</p>
 
             </div>
@@ -67,8 +67,8 @@
                         </svg>
                     </div>
                     <div class="fail-card-content">
-                        <h3 class="fail-card-title">غياب الفكرة الصحيحة</h3>
-                        <p class="fail-card-desc">المشروع يبدأ بحماس، لكن بدون تحقق حقيقي من السوق.</p>
+                        <h3 class="fail-card-title">غياب عقلية "نموذج العمل"</h3>
+                        <p class="fail-card-desc">الأغلب ينظر للمشاريع كفكرة مجردة، وفي الحقيقة هي عبارة عن "نموذج عمل" متكامل يحقق الهدف</p>
                     </div>
                 </div>
 
@@ -120,7 +120,7 @@
             </div>
             <div class="fail-impact-line animate">
                 <span class="fail-impact-arrow">↓</span>
-                <p>النتيجة؟ مشاريع تتوقف قبل ما تبدأ فعليًا</p>
+                <p>النتيجة؟ مشاريع تتوقف قبل أن تبدأ</p>
             </div>
         </section>
 
@@ -185,7 +185,7 @@
             
             <div class="ecosystem-statement-container animate">
                 <div class="ecosystem-statement-content">
-                    <p class="ecosystem-main-text">ليست مجرد معسكرات تدريبية، بل نموذج كامل لإعادة تأهيل الأشخاص لدخول السوق والتمكن منه.</p>
+                    <p class="ecosystem-main-text">طورنا فكرة المعسكرات التدريبية لتصبح نموذج كامل لإعادة تأهيل الأفراد لدخول السوق والتمكن منه</p>
                     <p class="ecosystem-support-text">هدفها بناء عقلية تجارية واعية، قادرة على التحليل، الاختيار، التفاوض، والتنفيذ.</p>
                     
                     <div class="ecosystem-highlight-box">
@@ -330,7 +330,7 @@
                     </div>
                     <div class="camp-card-body">
                         <p class="camp-desc">لتحويل الفكرة إلى مشروع وبدء البيع</p>
-                        <p class="camp-example">(مثل مبادرة انطلاقه)</p>
+                        <p class="camp-example">مثل: مبادرة الريادة التجارية بالصين ودورة الاستيراد الاحترافي من "علي بابا"</p>
                     </div>
                 </div>
 
@@ -353,7 +353,7 @@
                         <h3>معسكرات تطوير المشاريع</h3>
                     </div>
                     <div class="camp-card-body">
-                        <p class="camp-desc">لتحسين الأداء، تقليل التكاليف، وزيادة الربحية</p>
+                        <p class="camp-desc">نعمل من خلالها على تطوير المشاريع القائمة والمتعثرة من خلال تحسين الأداء، تقليل التكاليف، وزيادة الأرباح</p>
                     </div>
                 </div>
 
@@ -367,336 +367,6 @@
                         <p class="camp-desc">لإعداد الجيل القادم لقيادة الأعمال</p>
                         <p class="camp-example">(مثل معسكر قيادات الصف الثاني)</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6.5: Previous Camps Gallery -->
-        <section id="previous-camps" style="background: var(--bg-site); padding: 5rem 2rem;">
-            <div class="section-header animate">
-                <span class="badge">معرض الصور</span>
-                <h2>من معسكرات باني السابقة</h2>
-            </div>
-            
-            <style>
-                .previous-camps-slider {
-                    max-width: 1150px;
-                    margin: 0 auto;
-                    position: relative;
-                }
-                .previous-camps-track {
-                    display: flex;
-                    overflow-x: auto;
-                    scroll-snap-type: x mandatory;
-                    scroll-behavior: smooth;
-                    gap: 1.25rem;
-                    padding-bottom: 1rem;
-                    -ms-overflow-style: none;  
-                    scrollbar-width: none;  
-                }
-                .previous-camps-track::-webkit-scrollbar {
-                    display: none;
-                }
-                .previous-camps-slide {
-                    flex: 0 0 calc(33.333% - 0.85rem);
-                    scroll-snap-align: start;
-                    border-radius: 16px;
-                    overflow: hidden;
-                    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-                    border: 1px solid rgba(0,0,0,0.03);
-                    position: relative;
-                }
-                .previous-camps-image {
-                    width: 100%;
-                    height: 260px;
-                    object-fit: cover;
-                    display: block;
-                    transition: transform 0.5s ease;
-                }
-                .previous-camps-slide:hover .previous-camps-image {
-                    transform: scale(1.05);
-                }
-                .previous-camps-controls {
-                    display: flex;
-                    justify-content: center;
-                    gap: 1rem;
-                    margin-top: 1rem;
-                }
-                .previous-camps-controls button {
-                    background: var(--bg-card);
-                    border: 1px solid #eef2f6;
-                    color: var(--primary-blue);
-                    width: 44px;
-                    height: 44px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    transition: all 0.2s ease;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-                }
-                .previous-camps-controls button:hover {
-                    background: var(--primary-green);
-                    color: white;
-                    border-color: var(--primary-green);
-                }
-                .previous-camps-pagination {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 6px;
-                    margin-top: 1.5rem;
-                }
-                .previous-camps-dot {
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 50%;
-                    background: #cbd5e1;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                }
-                .previous-camps-dot.active {
-                    background: var(--primary-green);
-                    width: 24px;
-                    border-radius: 4px;
-                }
-                @media (max-width: 900px) {
-                    .previous-camps-slide { flex: 0 0 calc(50% - 0.625rem); }
-                    .previous-camps-image { height: 230px; }
-                }
-                @media (max-width: 600px) {
-                    .previous-camps-slide { flex: 0 0 100%; }
-                    .previous-camps-image { height: 220px; }
-                    #previous-camps { padding: 4rem 1rem; }
-                }
-            </style>
-
-            <div class="previous-camps-slider animate" id="campsGallerySlider">
-                <div class="previous-camps-track" id="campsTrack" dir="rtl">
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-training-session.webp" alt="جلسة تدريبية ضمن معسكرات باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-field-flag.webp" alt="مشاركون في جولة ميدانية من معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-china-street-sign.webp" alt="تجربة ميدانية في الصين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-workshop-presentation.webp" alt="ورشة عمل ضمن معسكر الريادة التجارية" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-banner.webp" alt="صورة جماعية من معسكر باني في الصين" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-vests.webp" alt="زيارة ميدانية للأسواق ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-supplier-discussion.webp" alt="نقاش مع موردين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-saudi-delegation.webp" alt="وفد سعودي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-bus-trip.webp" alt="رحلة ميدانية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-guangzhou-road.webp" alt="جولة في مدينة قوانزو ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-evening-discussion.webp" alt="جلسة نقاش مسائية ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-tour.webp" alt="جولة سوقية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-industrial-market.webp" alt="زيارة سوق صناعي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-product-discussion.webp" alt="نقاش حول المنتجات والفرص التجارية" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-dinner.webp" alt="عشاء جماعي للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-business-meeting.webp" alt="اجتماع أعمال ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-registration-area.webp" alt="منطقة تسجيل المشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
-                </div>
-
-                <div class="previous-camps-controls">
-                    <button id="campsPrevBtn" aria-label="السابق">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
-                    <button id="campsNextBtn" aria-label="التالي">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                </div>
-                
-                <div class="previous-camps-pagination" id="campsPagination"></div>
-            </div>
-
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const track = document.getElementById('campsTrack');
-                    const slides = Array.from(track.querySelectorAll('.previous-camps-slide'));
-                    const prevBtn = document.getElementById('campsPrevBtn');
-                    const nextBtn = document.getElementById('campsNextBtn');
-                    const pagination = document.getElementById('campsPagination');
-                    
-                    let currentIndex = 0;
-                    let autoPlayInterval;
-
-                    function getSlidesPerView() {
-                        if (window.innerWidth <= 600) return 1;
-                        if (window.innerWidth <= 900) return 2;
-                        return 3;
-                    }
-
-                    function generatePagination() {
-                        pagination.innerHTML = '';
-                        let spv = getSlidesPerView();
-                        let dotsCount = Math.max(1, slides.length - spv + 1);
-                        for(let i = 0; i < dotsCount; i++) {
-                            let dot = document.createElement('div');
-                            dot.className = 'previous-camps-dot' + (i === currentIndex ? ' active' : '');
-                            dot.addEventListener('click', () => {
-                                goToSlide(i);
-                                resetAutoplay();
-                            });
-                            pagination.appendChild(dot);
-                        }
-                    }
-
-                    function updatePagination() {
-                        Array.from(pagination.children).forEach((dot, index) => {
-                            dot.classList.toggle('active', index === currentIndex);
-                        });
-                    }
-
-                    function goToSlide(index) {
-                        let spv = getSlidesPerView();
-                        let maxIndex = Math.max(0, slides.length - spv);
-                        if (index < 0) index = maxIndex;
-                        if (index > maxIndex) index = 0;
-                        
-                        currentIndex = index;
-                        // In RTL, scrollIntoView with inline: 'start' aligns the right edge perfectly
-                        slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
-                        updatePagination();
-                    }
-
-                    let isTrackVisible = false;
-                    const visibilityObserver = new IntersectionObserver((entries) => {
-                        isTrackVisible = entries[0].isIntersecting;
-                    }, { threshold: 0.1 });
-                    visibilityObserver.observe(track);
-
-                    function startAutoplay() {
-                        autoPlayInterval = setInterval(() => {
-                            if (!isTrackVisible) return; // Prevent scroll hijacking when out of view
-                            let spv = getSlidesPerView();
-                            let maxIndex = Math.max(0, slides.length - spv);
-                            if(currentIndex >= maxIndex) {
-                                goToSlide(0);
-                            } else {
-                                goToSlide(currentIndex + 1);
-                            }
-                        }, 3500);
-                    }
-                    
-                    function stopAutoplay() {
-                        clearInterval(autoPlayInterval);
-                    }
-                    function resetAutoplay() {
-                        stopAutoplay();
-                        startAutoplay();
-                    }
-
-                    nextBtn.addEventListener('click', () => { goToSlide(currentIndex + 1); resetAutoplay(); });
-                    prevBtn.addEventListener('click', () => { goToSlide(currentIndex - 1); resetAutoplay(); });
-
-                    track.addEventListener('mouseenter', stopAutoplay);
-                    track.addEventListener('mouseleave', startAutoplay);
-                    track.addEventListener('touchstart', stopAutoplay, {passive: true});
-                    track.addEventListener('touchend', startAutoplay, {passive: true});
-
-                    let intersectingIndices = new Set();
-                    const trackObserver = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            const idx = slides.indexOf(entry.target);
-                            if (entry.isIntersecting) {
-                                intersectingIndices.add(idx);
-                            } else {
-                                intersectingIndices.delete(idx);
-                            }
-                        });
-                        if (intersectingIndices.size > 0) {
-                            currentIndex = Math.min(...Array.from(intersectingIndices));
-                            updatePagination();
-                        }
-                    }, { root: track, threshold: 0.5 });
-                    
-                    slides.forEach(slide => trackObserver.observe(slide));
-
-                    window.addEventListener('resize', () => {
-                        generatePagination();
-                        goToSlide(currentIndex);
-                    });
-
-                    generatePagination();
-                    startAutoplay();
-                });
-            </script>
-        </section>
-
-        <!-- Section 6: Economic Impact -->
-        <section id="impact" style="background: var(--bg-site); padding: 5rem 2rem;">
-            <div class="section-header animate">
-                <span class="badge">الأثر الاقتصادي والاستراتيجي</span>
-                <h2>الأثر الاقتصادي لدعم هذا المعسكر</h2>
-                <p>دعم معسكرات باني لا يعني دعم تجربة تعليمية فقط، بل دعم مسار يساعد على بناء مشاريع أكثر وعيًا، قرارات أكثر نضجًا، وفرص تجارية قابلة للنمو.</p>
-            </div>
-
-            <style>
-                .impact-rows-container {
-                    max-width: 1000px;
-                    margin: 0 auto;
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 1.25rem;
-                }
-                .impact-row {
-                    background: var(--bg-card);
-                    border: 1px solid #eef2f6;
-                    border-radius: 12px;
-                    padding: 1.25rem 1.5rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 1rem;
-                    transition: all 0.3s ease;
-                }
-                .impact-row:hover {
-                    border-color: var(--primary-green);
-                    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
-                    transform: translateX(-5px);
-                }
-                .impact-row svg {
-                    color: var(--primary-green);
-                    flex-shrink: 0;
-                }
-                .impact-row span {
-                    font-size: 1.05rem;
-                    font-weight: 700;
-                    color: var(--text-main);
-                }
-                @media (max-width: 768px) {
-                    .impact-rows-container {
-                        grid-template-columns: 1fr;
-                        gap: 1rem;
-                    }
-                    #impact {
-                        padding: 4rem 1.5rem;
-                    }
-                    .impact-row {
-                        padding: 1rem 1.25rem;
-                    }
-                }
-            </style>
-
-            <div class="impact-rows-container">
-                <div class="impact-row animate">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>رفع جودة قرارات رواد الأعمال</span>
-                </div>
-                <div class="impact-row animate" style="transition-delay: 0.1s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>تقليل الهدر الناتج عن التجارب العشوائية</span>
-                </div>
-                <div class="impact-row animate" style="transition-delay: 0.2s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>بناء مشاريع أكثر قابلية للاستمرار</span>
-                </div>
-                <div class="impact-row animate" style="transition-delay: 0.3s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>تعزيز ارتباط رواد الأعمال بالأسواق العالمية</span>
-                </div>
-                <div class="impact-row animate" style="transition-delay: 0.4s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>دعم انتقال المعرفة إلى تطبيق فعلي</span>
-                </div>
-                <div class="impact-row animate" style="transition-delay: 0.5s;">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    <span>خلق فرص تجارية وشراكات أوسع</span>
                 </div>
             </div>
         </section>
@@ -819,7 +489,7 @@
                 <div class="flex-header animate">
                     <span class="badge">تخصيص المسار</span>
                     <h2>نموذج معسكرات مرن وقابل للتخصيص</h2>
-                    <p>لا تعمل باني بنموذج واحد ثابت، بل يتم تصميم المعسكر حسب طبيعة المشاركين، القطاع المستهدف، السوق المراد فهمه، وهدف الجهة أو الفئة المشاركة.</p>
+                    <p>معسكرات باني تقوم على مبدأ التخصيص وليس مبدأ النموذج الثابت لتوفير أقصي استفادة للمشتركين بناءًا على:</p>
                 </div>
                 
                 <div class="flex-grid">
@@ -964,6 +634,617 @@
             </div>
         </section>
 
+        <!-- Section 6.5: Previous Camps Gallery -->
+        <section id="previous-camps" style="background: var(--bg-site); padding: 5rem 2rem;">
+            <div class="section-header animate">
+                <span class="badge">معرض الصور</span>
+                <h2>من معسكرات باني السابقة</h2>
+            </div>
+            
+            <style>
+                .previous-camps-slider {
+                    max-width: 1150px;
+                    margin: 0 auto;
+                    position: relative;
+                }
+                .previous-camps-track {
+                    display: flex;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    gap: 1.25rem;
+                    padding-bottom: 1rem;
+                    -ms-overflow-style: none;  
+                    scrollbar-width: none;  
+                }
+                .previous-camps-track::-webkit-scrollbar {
+                    display: none;
+                }
+                .previous-camps-slide {
+                    flex: 0 0 calc(33.333% - 0.85rem);
+                    scroll-snap-align: start;
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+                    border: 1px solid rgba(0,0,0,0.03);
+                    position: relative;
+                }
+                .previous-camps-image {
+                    width: 100%;
+                    height: 260px;
+                    object-fit: cover;
+                    display: block;
+                    transition: transform 0.5s ease;
+                }
+                .previous-camps-slide:hover .previous-camps-image {
+                    transform: scale(1.05);
+                }
+                .previous-camps-controls {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+                .previous-camps-controls button {
+                    background: var(--bg-card);
+                    border: 1px solid #eef2f6;
+                    color: var(--primary-blue);
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+                }
+                .previous-camps-controls button:hover {
+                    background: var(--primary-green);
+                    color: white;
+                    border-color: var(--primary-green);
+                }
+                .previous-camps-pagination {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                    margin-top: 1.5rem;
+                }
+                .previous-camps-dot {
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: #cbd5e1;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .previous-camps-dot.active {
+                    background: var(--primary-green);
+                    width: 24px;
+                    border-radius: 4px;
+                }
+                @media (max-width: 900px) {
+                    .previous-camps-slide { flex: 0 0 calc(50% - 0.625rem); }
+                    .previous-camps-image { height: 230px; }
+                }
+                @media (max-width: 768px) {
+                    .previous-camps-slider { width: 100%; overflow: hidden; padding: 0 0.5rem; box-sizing: border-box; }
+                    .previous-camps-slide { flex: 0 0 100%; width: 100%; box-sizing: border-box; }
+                    .previous-camps-image { width: 100%; height: 220px; object-fit: cover; border-radius: 16px; }
+                    .previous-camps-controls button { width: 40px; height: 40px; font-size: 1rem; }
+                    .previous-camps-pagination { gap: 6px; flex-wrap: wrap; justify-content: center; max-width: 100%; }
+                    .previous-camps-dot { width: 8px; height: 8px; }
+                    .previous-camps-dot.active { width: 20px; }
+                }
+                @media (max-width: 480px) {
+                    #previous-camps { padding: 3rem 0; overflow: hidden; }
+                    .previous-camps-slider { padding: 0 0.5rem; }
+                    .previous-camps-slide { flex: 0 0 100%; padding: 0; box-sizing: border-box; }
+                    .previous-camps-image { height: 180px; width: 100%; object-fit: cover; border-radius: 12px; }
+                    .previous-camps-controls button { width: 34px; height: 34px; font-size: 0.875rem; }
+                    .previous-camps-pagination { gap: 4px; margin-top: 1rem; padding: 0 10px; }
+                    .previous-camps-dot { width: 6px; height: 6px; }
+                    .previous-camps-dot.active { width: 16px; }
+                }
+            </style>
+
+            <div class="previous-camps-slider animate" id="campsGallerySlider">
+                <div class="previous-camps-track" id="campsTrack" dir="rtl">
+<div class="previous-camps-slide"><img src="images/camps/new_camp_img1.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/new_camp_img2.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_rand2.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-training-session.webp" alt="جلسة تدريبية ضمن معسكرات باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-field-flag.webp" alt="مشاركون في جولة ميدانية من معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_after5_1.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_after5_2.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_after5_3.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_rand4.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-china-street-sign.webp" alt="تجربة ميدانية في الصين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-workshop-presentation.webp" alt="ورشة عمل ضمن معسكر الريادة التجارية" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-banner.webp" alt="صورة جماعية من معسكر باني في الصين" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_middle.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_rand3.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-vests.webp" alt="زيارة ميدانية للأسواق ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-supplier-discussion.webp" alt="نقاش مع موردين ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-saudi-delegation.webp" alt="وفد سعودي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-bus-trip.webp" alt="رحلة ميدانية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-evening-discussion.webp" alt="جلسة نقاش مسائية ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-market-tour.webp" alt="جولة سوقية للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-industrial-market.webp" alt="زيارة سوق صناعي ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-product-discussion.webp" alt="نقاش حول المنتجات والفرص التجارية" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-group-dinner.webp" alt="عشاء جماعي للمشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-business-meeting.webp" alt="اجتماع أعمال ضمن معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/bany-camp-registration-area.webp" alt="منطقة تسجيل المشاركين في معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                    <div class="previous-camps-slide"><img src="images/camps/img_last.jpg" alt="معسكر باني" class="previous-camps-image" loading="lazy"></div>
+                </div>
+
+                <div class="previous-camps-controls">
+                    <button id="campsPrevBtn" aria-label="السابق">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                    <button id="campsNextBtn" aria-label="التالي">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                </div>
+                
+                <div class="previous-camps-pagination" id="campsPagination"></div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track = document.getElementById('campsTrack');
+                    const slides = Array.from(track.querySelectorAll('.previous-camps-slide'));
+                    const prevBtn = document.getElementById('campsPrevBtn');
+                    const nextBtn = document.getElementById('campsNextBtn');
+                    const pagination = document.getElementById('campsPagination');
+                    
+                    let currentIndex = 0;
+                    let autoPlayInterval;
+
+                    function getSlidesPerView() {
+                        if (window.innerWidth <= 600) return 1;
+                        if (window.innerWidth <= 900) return 2;
+                        return 3;
+                    }
+
+                    function generatePagination() {
+                        pagination.innerHTML = '';
+                        let spv = getSlidesPerView();
+                        let dotsCount = Math.max(1, slides.length - spv + 1);
+                        for(let i = 0; i < dotsCount; i++) {
+                            let dot = document.createElement('div');
+                            dot.className = 'previous-camps-dot' + (i === currentIndex ? ' active' : '');
+                            dot.addEventListener('click', () => {
+                                goToSlide(i);
+                                resetAutoplay();
+                            });
+                            pagination.appendChild(dot);
+                        }
+                    }
+
+                    function updatePagination() {
+                        Array.from(pagination.children).forEach((dot, index) => {
+                            dot.classList.toggle('active', index === currentIndex);
+                        });
+                    }
+
+                    function goToSlide(index) {
+                        let spv = getSlidesPerView();
+                        let maxIndex = Math.max(0, slides.length - spv);
+                        if (index < 0) index = maxIndex;
+                        if (index > maxIndex) index = 0;
+                        
+                        currentIndex = index;
+                        // In RTL, scrollIntoView with inline: 'start' aligns the right edge perfectly
+                        slides[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                        updatePagination();
+                    }
+
+                    let isTrackVisible = false;
+                    const visibilityObserver = new IntersectionObserver((entries) => {
+                        isTrackVisible = entries[0].isIntersecting;
+                    }, { threshold: 0.1 });
+                    visibilityObserver.observe(track);
+
+                    function startAutoplay() {
+                        autoPlayInterval = setInterval(() => {
+                            if (!isTrackVisible) return; // Prevent scroll hijacking when out of view
+                            let spv = getSlidesPerView();
+                            let maxIndex = Math.max(0, slides.length - spv);
+                            if(currentIndex >= maxIndex) {
+                                goToSlide(0);
+                            } else {
+                                goToSlide(currentIndex + 1);
+                            }
+                        }, 3500);
+                    }
+                    
+                    function stopAutoplay() {
+                        clearInterval(autoPlayInterval);
+                    }
+                    function resetAutoplay() {
+                        stopAutoplay();
+                        startAutoplay();
+                    }
+
+                    nextBtn.addEventListener('click', () => { goToSlide(currentIndex + 1); resetAutoplay(); });
+                    prevBtn.addEventListener('click', () => { goToSlide(currentIndex - 1); resetAutoplay(); });
+
+                    track.addEventListener('mouseenter', stopAutoplay);
+                    track.addEventListener('mouseleave', startAutoplay);
+                    track.addEventListener('touchstart', stopAutoplay, {passive: true});
+                    track.addEventListener('touchend', startAutoplay, {passive: true});
+
+                    let intersectingIndices = new Set();
+                    const trackObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            const idx = slides.indexOf(entry.target);
+                            if (entry.isIntersecting) {
+                                intersectingIndices.add(idx);
+                            } else {
+                                intersectingIndices.delete(idx);
+                            }
+                        });
+                        if (intersectingIndices.size > 0) {
+                            currentIndex = Math.min(...Array.from(intersectingIndices));
+                            updatePagination();
+                        }
+                    }, { root: track, threshold: 0.5 });
+                    
+                    slides.forEach(slide => trackObserver.observe(slide));
+
+                    window.addEventListener('resize', () => {
+                        generatePagination();
+                        goToSlide(currentIndex);
+                    });
+
+                    generatePagination();
+                    startAutoplay();
+                });
+            </script>
+
+            <div class="section-header animate" style="margin-top: 6rem; margin-bottom: 2.5rem;">
+                <h2>لقطات من معسكراتنا السابقة</h2>
+            </div>
+            
+            <div class="previous-camps-slider animate" id="videosGallerySlider">
+                <div class="previous-camps-track" id="videosTrack" dir="rtl">
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/_BGBcVGVyTg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/bcZNhLMoP70" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/ZP5M5L1hDJc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/tIoRPZCHfOM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/HF2did1Ut4k" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/1gSn1DZB3cU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                    <div class="previous-camps-slide">
+                        <iframe width="100%" style="aspect-ratio: 16/9; width: 100%; height: auto; border:none; border-radius: 12px;" src="https://www.youtube.com/embed/dR6Twxb3F0c" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                    </div>
+                </div>
+
+                <div class="previous-camps-controls">
+                    <button id="videosPrevBtn" aria-label="السابق">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                    <button id="videosNextBtn" aria-label="التالي">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                </div>
+                
+                <div class="previous-camps-pagination" id="videosPagination"></div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track2 = document.getElementById('videosTrack');
+                    const slides2 = Array.from(track2.querySelectorAll('.previous-camps-slide'));
+                    const prevBtn2 = document.getElementById('videosPrevBtn');
+                    const nextBtn2 = document.getElementById('videosNextBtn');
+                    const pagination2 = document.getElementById('videosPagination');
+                    
+                    let currentIndex2 = 0;
+
+                    function getSlidesPerView2() {
+                        if (window.innerWidth <= 600) return 1;
+                        if (window.innerWidth <= 900) return 2;
+                        return 3;
+                    }
+
+                    function generatePagination2() {
+                        pagination2.innerHTML = '';
+                        let spv2 = getSlidesPerView2();
+                        let dotsCount2 = Math.max(1, slides2.length - spv2 + 1);
+                        for(let i = 0; i < dotsCount2; i++) {
+                            let dot = document.createElement('div');
+                            dot.className = 'previous-camps-dot' + (i === currentIndex2 ? ' active' : '');
+                            dot.addEventListener('click', () => {
+                                goToSlide2(i);
+                            });
+                            pagination2.appendChild(dot);
+                        }
+                    }
+
+                    function updatePagination2() {
+                        Array.from(pagination2.children).forEach((dot, index) => {
+                            dot.classList.toggle('active', index === currentIndex2);
+                        });
+                    }
+
+                    function goToSlide2(index) {
+                        let spv2 = getSlidesPerView2();
+                        let maxIndex2 = Math.max(0, slides2.length - spv2);
+                        if (index < 0) index = maxIndex2;
+                        if (index > maxIndex2) index = 0;
+                        
+                        currentIndex2 = index;
+                        slides2[currentIndex2].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+                        updatePagination2();
+                    }
+
+                    nextBtn2.addEventListener('click', () => { goToSlide2(currentIndex2 + 1); });
+                    prevBtn2.addEventListener('click', () => { goToSlide2(currentIndex2 - 1); });
+
+                    let intersectingIndices2 = new Set();
+                    const trackObserver2 = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            const idx = slides2.indexOf(entry.target);
+                            if (entry.isIntersecting) {
+                                intersectingIndices2.add(idx);
+                            } else {
+                                intersectingIndices2.delete(idx);
+                            }
+                        });
+                        if (intersectingIndices2.size > 0) {
+                            currentIndex2 = Math.min(...Array.from(intersectingIndices2));
+                            updatePagination2();
+                        }
+                    }, { root: track2, threshold: 0.5 });
+                    
+                    slides2.forEach(slide => trackObserver2.observe(slide));
+
+                    window.addEventListener('resize', () => {
+                        generatePagination2();
+                        goToSlide2(currentIndex2);
+                    });
+
+                    generatePagination2();
+                });
+            </script>
+
+        </section>
+
+        <!-- Section 6: Economic Impact -->
+        <section id="impact" style="background: var(--bg-site); padding: 5rem 2rem;">
+            <div class="section-header animate">
+                <span class="badge">الأثر الاقتصادي والاستراتيجي</span>
+                <h2>الأثر الاقتصادي لدعم المعسكرات</h2>
+                <p>دعم معسكرات باني لا ينعكس على المشارك فقط، بل يمتد أثره إلى المجتمع والسوق وأهداف التنمية الاقتصادية في المملكة.</p>
+            </div>
+
+            <style>
+                .impact-professional-table {
+                    width: 100%;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    border-collapse: separate;
+                    border-spacing: 0;
+                    background: var(--bg-card);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+                    border: 1px solid #eef2f6;
+                }
+                .impact-professional-table th, 
+                .impact-professional-table td {
+                    padding: 1.5rem 2rem;
+                    text-align: right;
+                    border-bottom: 1px solid #eef2f6;
+                }
+                .impact-professional-table tr:last-child th,
+                .impact-professional-table tr:last-child td {
+                    border-bottom: none;
+                }
+                .impact-professional-table tbody tr {
+                    transition: background-color 0.3s ease;
+                }
+                .impact-professional-table tbody tr:hover {
+                    background-color: rgba(16, 185, 129, 0.03);
+                }
+                .impact-th-level {
+                    width: 28%;
+                    font-size: 1.15rem;
+                    font-weight: 800;
+                    color: var(--primary-blue);
+                    background-color: #f8fafc;
+                    border-left: 1px solid #eef2f6;
+                    vertical-align: middle;
+                }
+                .impact-td-desc {
+                    font-size: 1.05rem;
+                    color: var(--text-main);
+                    line-height: 1.7;
+                    vertical-align: middle;
+                }
+                .impact-icon-wrapper {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 36px;
+                    height: 36px;
+                    background: rgba(16, 185, 129, 0.1);
+                    color: var(--primary-green);
+                    border-radius: 8px;
+                    margin-left: 0.75rem;
+                    vertical-align: middle;
+                }
+                
+                @media (max-width: 768px) {
+                    .impact-professional-table {
+                        display: block;
+                        border: none;
+                        box-shadow: none;
+                        background: transparent;
+                    }
+                    .impact-professional-table tbody,
+                    .impact-professional-table tr,
+                    .impact-professional-table th,
+                    .impact-professional-table td {
+                        display: block;
+                        width: 100%;
+                    }
+                    .impact-professional-table tr {
+                        background: var(--bg-card);
+                        margin-bottom: 1rem;
+                        border-radius: 12px;
+                        border: 1px solid #eef2f6;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+                    }
+                    .impact-professional-table th {
+                        border-bottom: 1px solid #eef2f6;
+                        border-left: none;
+                        background-color: transparent;
+                        padding-bottom: 1rem;
+                    }
+                    .impact-professional-table td {
+                        border-bottom: none;
+                        padding-top: 1rem;
+                    }
+                }
+            </style>
+
+            <table class="impact-professional-table animate">
+                <tbody>
+                    <tr>
+                        <th class="impact-th-level">
+                            <div class="impact-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            </div>
+                            الأثر على الأفراد
+                        </th>
+                        <td class="impact-td-desc">تمكينهم من دخول السوق بعقلية تاجر، وبناء مشروع واضح، وتقليل قراراته العشوائية، مع تعلم التعامل مع المخاطر لأجل بناء جيل حقيقي من التجار.</td>
+                    </tr>
+                    <tr>
+                        <th class="impact-th-level">
+                            <div class="impact-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            الأثر على المجتمع
+                        </th>
+                        <td class="impact-td-desc">خلق مصدر دخل أكثر استقرارًا، دعم استمرارية المشاريع العائلية، إعداد الأبناء لتحمل المسؤولية التجارية، وتقليل المخاطر الناتجة عن انتقال الأعمال بين الأجيال.</td>
+                    </tr>
+                    <tr>
+                        <th class="impact-th-level">
+                            <div class="impact-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            </div>
+                            الأثر على السوق
+                        </th>
+                        <td class="impact-td-desc">رفع جودة دخول رواد الأعمال للسوق، تقليل المشاريع غير المدروسة، تحسين كفاءة التجارة والاستيراد، وزيادة عدد المشاريع المبنية على فهم حقيقي للسوق.</td>
+                    </tr>
+                    <tr>
+                        <th class="impact-th-level">
+                            <div class="impact-icon-wrapper">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            </div>
+                            الأثر على رؤية 2030
+                        </th>
+                        <td class="impact-td-desc">المساهمة في تمكين رواد الأعمال، تنمية المنشآت الصغيرة والمتوسطة، تعزيز المحتوى المحلي، دعم التنويع الاقتصادي، وبناء جيل تجاري قادر على المنافسة محليًا ودوليًا.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+<!-- Section 9: Why Applied Solution -->
+        <section id="applied-solution" style="background: var(--bg-site);">
+            <div class="section-header animate">
+                <span class="badge">نهاية التنظير</span>
+                <h2>منهجية التنفيذ… التي تصنع الفرق</h2>
+                <p>كل معسكر مبني على 4 مراحل متكاملة:</p>
+            </div>
+            <div class="grid-container"
+                style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto; gap: 2rem;">
+                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--primary-blue);">
+                    <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-blue); display: flex; align-items: center; justify-content: center;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">التأهيل</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">بناء الفهم الصحيح وتصحيح المفاهيم الأساسية قبل الانطلاق الميداني.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="--target-width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--primary-green);">
+                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-green); display: flex; align-items: center; justify-content: center;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">التطبيق</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">الممارسة العملية المباشرة والتجربة داخل السوق في ظروف حقيقية ومعقدة.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="--target-width: 100%; background: var(--primary-green);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--deep-blue);">
+                    <div class="card-icon" style="background: rgba(30, 58, 138, 0.1); color: var(--deep-blue); display: flex; align-items: center; justify-content: center;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">الربط</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">بناء علاقات تجارية حقيقية مع الموردين، المستثمرين، والشركاء الاستراتيجيين.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="--target-width: 100%; background: var(--deep-blue);"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid #f59e0b;">
+                    <div class="card-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; display: flex; align-items: center; justify-content: center;">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </div>
+                    <div style="flex: 1;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">المتابعة</h4>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">ضمان استدامة الأثر والتنفيذ الفعلي للمشروع في السوق بعد انتهاء المعسكر.</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" style="--target-width: 100%; background: #f59e0b;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Section X: China Entrepreneurship Camp -->
         <section id="china-camp" style="background: var(--ice-blue);">
             <style>
@@ -1041,11 +1322,11 @@
                         <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>مقابلات مع موردين ومصنعين</div>
                         <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>ورش يومية لتحليل الفرص</div>
                         <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>تدريب عملي على التفاوض</div>
-                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>فهم التسعير وسلاسل التوريد</div>
-                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قرارات تجارية واضحة</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>استشارات متخصصة</div>
+                        <div class="china-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>زيارة معارض متنوعة</div>
                     </div>
                     
-                    <a href="javascript:void(0)" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; padding: 0.8rem 1.8rem; border-radius: 50px;">
+                    <a href="https://banybiz.com/entrepreneurship-camp/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; padding: 0.8rem 1.8rem; border-radius: 50px;">
                         عرض صفحة معسكر الصين كاملة
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     </a>
@@ -1084,82 +1365,6 @@
                             </svg>
                         </div>
                         <h3 class="cv-card-title">بناء شراكات مباشرة</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!-- Section 9: Why Applied Solution -->
-        <section id="applied-solution" style="background: var(--bg-site);">
-            <div class="section-header animate">
-                <span class="badge">نهاية التنظير</span>
-                <h2>منهجية التنفيذ… التي تصنع الفرق</h2>
-                <p>كل معسكر مبني على 4 مراحل متكاملة:</p>
-            </div>
-            <div class="grid-container"
-                style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto; gap: 2rem;">
-                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--primary-blue);">
-                    <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--primary-blue); display: flex; align-items: center; justify-content: center;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                        </svg>
-                    </div>
-                    <div style="flex: 1;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">التأهيل</h4>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">بناء الفهم الصحيح وتصحيح المفاهيم الأساسية قبل الانطلاق الميداني.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="--target-width: 100%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--primary-green);">
-                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-green); display: flex; align-items: center; justify-content: center;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="12" r="6"></circle>
-                            <circle cx="12" cy="12" r="2"></circle>
-                        </svg>
-                    </div>
-                    <div style="flex: 1;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">التطبيق</h4>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">الممارسة العملية المباشرة والتجربة داخل السوق في ظروف حقيقية ومعقدة.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="--target-width: 100%; background: var(--primary-green);">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid var(--deep-blue);">
-                    <div class="card-icon" style="background: rgba(30, 58, 138, 0.1); color: var(--deep-blue); display: flex; align-items: center; justify-content: center;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div style="flex: 1;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">الربط</h4>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">بناء علاقات تجارية حقيقية مع الموردين، المستثمرين، والشركاء الاستراتيجيين.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="--target-width: 100%; background: var(--deep-blue);"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card horizontal" style="padding: 2rem; border-right: 4px solid #f59e0b;">
-                    <div class="card-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; display: flex; align-items: center; justify-content: center;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="23 4 23 10 17 10"></polyline>
-                            <polyline points="1 20 1 14 7 14"></polyline>
-                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-                        </svg>
-                    </div>
-                    <div style="flex: 1;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 0.4rem;">المتابعة</h4>
-                        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 0.8rem; line-height: 1.5;">ضمان استدامة الأثر والتنفيذ الفعلي للمشروع في السوق بعد انتهاء المعسكر.</p>
-                        <div class="progress-container">
-                            <div class="progress-bar" style="--target-width: 100%; background: #f59e0b;"></div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1260,6 +1465,7 @@
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>معرفة بدون تجربة</li>
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>قرارات غير مختبرة</li>
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>اعتماد على التخمين</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>تعثر المشاريع</li>
                     </ul>
                 </div>
 
@@ -1270,7 +1476,7 @@
                         <h3>تجربة تطبيقية</h3>
                     </div>
                     <ul class="comp-list">
-                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>رؤية مباشرة للسوق</li>
+                        <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>الممارسة الحقيقية بالسوق</li>
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>مقارنة حقيقية بين الفرص</li>
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>تفاوض وتجربة وملاحظة</li>
                         <li class="comp-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>قرارات مبنية على فهم</li>
@@ -1279,7 +1485,7 @@
             </div>
             
             <p class="comp-closing animate" style="transition-delay: 0.2s;">
-                لأن رائد الأعمال لا يحتاج إلى معرفة فقط، بل يحتاج إلى تجربة تجعله يرى، يقارن، يسأل، يفاوض، ويقرر.
+                وهنا رائد الأعمال يمارس التجارة بشكل مباشر يغير عقليته ورؤيته التجارية.
             </p>
         </section>
 
@@ -1288,7 +1494,7 @@
             <div class="section-header animate">
                 <span class="badge">أثر المعسكر</span>
                 <h2>الأثر الحقيقي على المشاركين</h2>
-                <p>لا ينتهي أثر المعسكر بانتهاء التجربة، بل يظهر في وضوح القرار، تقليل المخاطر، وبناء قدرة حقيقية على التحرك داخل السوق.</p>
+                <p>أثر المعسكر الحقيقي يظهر في وضوح القرارات، تقليل المخاطر، وبناء قدرة حقيقية على التحرك بذكاء داخل السوق.</p>
             </div>
 
 
@@ -1380,7 +1586,7 @@
                             </svg>
                         </div>
                         <div class="outcome-row-content">
-                            <h3 class="outcome-row-title">وضوح الخطوة التالية بعد المعسكر</h3>
+                            <h3 class="outcome-row-title">الجاهزية للإنطلاق بعد المعسكر</h3>
                             <p class="outcome-row-desc">امتلاك خطة عمل تنفيذية واضحة ومسار محدد جاهز للتطبيق الفوري.</p>
                         </div>
                     </div>
@@ -1458,7 +1664,7 @@
 
             <div class="sus-panel animate">
                 <span class="sus-panel-badge">نموذج مستدام</span>
-                <h2>نموذج مستدام وليس تجربة مؤقتة</h2>
+
                 <p>منظومة معسكرات باني ليست فعالية عابرة، بل نموذج قابل للتكرار، التطوير، والتخصيص حسب احتياج السوق والجهات المشاركة.</p>
                 
                 <div class="sus-chips-container">
@@ -1480,9 +1686,8 @@
                 <h2 style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.4; margin-bottom: 1.5rem; color: white;">استثمر في بناء رواد أعمال أكثر جاهزية للسوق</h2>
                 <p style="font-size: clamp(1.15rem, 2.5vw, 1.4rem); opacity: 0.95; margin-bottom: 1.2rem; max-width: 800px; font-weight: 500; color: rgba(255,255,255,0.95);">معسكرات باني صُممت لتصنع فرقًا حقيقيًا في طريقة التفكير، اتخاذ القرار، وفهم السوق.</p>
                 <p style="font-size: clamp(1rem, 2vw, 1.15rem); opacity: 0.8; margin-bottom: 3rem; max-width: 700px; font-style: italic; color: rgba(255,255,255,0.8);">من الفكرة إلى التجربة، ومن التجربة إلى القرار، ومن القرار إلى مشروع أكثر وضوحًا واستعدادًا للنمو.</p>
-                <div class="btn-group" style="width: auto; gap: 1.5rem;">
-                    <a href="javascript:void(0)" class="btn btn-primary" style="background: var(--primary-green); color: #0f172a; padding: 1.2rem 3rem; font-size: 1.25rem;">ابدأ التعاون مع باني</a>
-                    <a href="javascript:void(0)" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.4); color: white; padding: 1.2rem 3rem; font-size: 1.25rem; display: inline-flex; align-items: center; justify-content: center;">تواصل معنا لمعرفة النموذج الأنسب</a>
+                <div class="btn-group" style="width: 100%; display: flex; justify-content: center;">
+                    <a href="https://wa.me/966554033156" target="_blank" class="btn btn-primary" style="background: var(--primary-green); color: #0f172a; padding: 1.2rem 3rem; font-size: 1.25rem;">ابدأ التعاون مع باني</a>
                 </div>
             </div>
         </section>
